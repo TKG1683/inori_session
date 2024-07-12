@@ -3,28 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>水瀬いのりセッション会</title>
+    <title>Music Live Event</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>水瀬いのりセッション会</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="about.html">メンバー紹介</a></li>
-                <li><a href="blog.html">ブログ</a></li>
-                <li><a href="events.html">イベント</a></li>
-                <li><a href="videos.html">動画</a></li>
-            </ul>
-        </nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <h1>Music Live Event</h1>
     </header>
+    <nav id="overlay-nav">
+        <ul>
+            <li><a href="#home" onclick="toggleMenu()">ホーム</a></li>
+            <li><a href="#about" onclick="toggleMenu()">メンバー紹介</a></li>
+            <li><a href="#events" onclick="toggleMenu()">イベント</a></li>
+            <li><a href="#videos" onclick="toggleMenu()">動画</a></li>
+        </ul>
+    </nav>
     <main>
-        <h2>音楽ライブイベントへようこそ</h2>
-        <p>忘れられない体験をお届けします。</p>
+        <section id="home">
+            <h2>音楽ライブイベントへようこそ</h2>
+            <p>忘れられない体験をお届けします。</p>
+        </section>
+        <section id="about">
+            <h2>メンバー紹介</h2>
+            <div class="members">
+                <!-- メンバー紹介をここに追加 -->
+            </div>
+        </section>
+        <section id="events">
+            <h2>次回のイベント</h2>
+            <div class="events">
+                <!-- イベント詳細をここに追加 -->
+            </div>
+        </section>
+        <section id="videos">
+            <h2>過去のイベント動画</h2>
+            <div class="videos">
+                <!-- YouTube動画をここに追加 -->
+            </div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2024 水瀬いのりセッション会</p>
+        <p>&copy; 2024 Music Live Event</p>
     </footer>
     <script src="js/scripts.js"></script>
 </body>

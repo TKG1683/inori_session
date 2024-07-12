@@ -1,7 +1,18 @@
+/* 基本スタイル */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to bottom, #b3d9ff 0%, #99ccff 100%);
+    animation: bgColorChange 10s infinite;
+}
+
+@keyframes bgColorChange {
+    0% { background-color: #b3d9ff; }
+    25% { background-color: #99ccff; }
+    50% { background-color: #80bfff; }
+    75% { background-color: #66b3ff; }
+    100% { background-color: #4da6ff; }
 }
 
 header {
@@ -9,25 +20,56 @@ header {
     color: #fff;
     padding: 1em 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-nav ul {
+header .menu-icon {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#overlay-nav {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay-nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1em;
+#overlay-nav ul li {
+    margin: 20px 0;
 }
 
-nav ul li a {
+#overlay-nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 24px;
 }
 
 main {
-    padding: 2em;
+    padding: 80px 20px 20px 20px;
+}
+
+section {
+    padding: 2em 0;
 }
 
 footer {
@@ -35,18 +77,14 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
-.members, .blog-posts, .events, .videos {
+.members, .events, .videos {
     margin: 2em 0;
 }
 
 @media (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 1em 0;
+    #overlay-nav ul li a {
+        font-size: 20px;
     }
 }
