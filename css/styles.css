@@ -82,6 +82,15 @@ header .menu-icon {
     font-size: 24px;
 }
 
+#overlay-nav .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+}
+
 main {
     padding: 80px 20px 20px 20px;
 }
