@@ -45,24 +45,20 @@ header .menu-icon {
     z-index: 1001;
     justify-content: center;
     align-items: center;
-    animation: slideIn 0.5s forwards;
     transform: translateX(-100%);
 }
 
 #overlay-nav.show {
     display: flex;
     transform: translateX(0);
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 1;
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+#overlay-nav.hide {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 #overlay-nav ul {
