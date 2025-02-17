@@ -1,0 +1,62 @@
+.frameChild
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  background-color: var(--color-gainsboro);
+  width: 100%;
+  height: 100%;
+}
+
+.infoSplitter
+{
+  position: absolute;
+  left: 20px;
+  width: 180px;
+  height: 2px;
+}
+
+.infoItem
+{
+  position: absolute;
+  left: 25px;
+  letter-spacing: -0.5px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  width: 246px;
+  height: 20px;
+  text-shadow: 1px 0 0 rgba(0, 0, 0, 0.49), 0 1px 0 rgba(0, 0, 0, 0.49),
+    -1px 0 0 rgba(0, 0, 0, 0.49), 0 -1px 0 rgba(0, 0, 0, 0.49);
+  margin-bottom: 10px; /* Add margin to create space between items */
+  font-size: var(--font-size-smi);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+
+.showMoreButton {
+  left: 20px;
+  display: block;
+  font-size: var(--font-size-smi);
+  color: var(--color-black); /* Change text color to black */
+  font-style: italic; /* Make text italic */
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  z-index: 1; /* Ensure the button is in front */
+  position: relative; /* Ensure the button is positioned relative to its container */
+}
+
+.image1Icon
+{
+  position: absolute;
+  top: 0px;
+  left: 212px;
+  width: 163px;
+  height: 234px;
+  object-fit: cover;
+}
