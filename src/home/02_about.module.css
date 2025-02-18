@@ -1,43 +1,10 @@
-.aboutContainer
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-sm) var(--padding-8xs) var(--padding-8xs)
-    var(--padding-7xs);
-  box-sizing: border-box;
-  gap: var(--gap-14xl);
-  text-align: center;
-  font-size: 5rem;
-  color: var(--color-white);
-  font-family: var(--font-inter);
-}
-
-.aboutContainerChild
-{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    margin: 0 !important;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    backdrop-filter: blur(4px);
-    background-color: var(--color-gainsboro);
-    z-index: 0;
-}
-
-
-
 .description
 {
     top: 0;
+    width: 80%;
+    height: auto;
+    /* background-color: rgb(209, 255, 255, 0.5); */
+    /* border-radius: 15px;  */
     left: 3rem;
     text-align: left;
     z-index: 1; /* Ensure the button is in front */ 

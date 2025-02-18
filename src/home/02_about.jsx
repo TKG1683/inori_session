@@ -5,10 +5,11 @@ import common_styles from "./common.module.css";
 const About = ({ className = "" }) => {
   return (
     <div className={common_styles.columnContainer}>
-      <div className={styles.aboutContainerChild} />
+      <div className={common_styles.columnContainerChild} />
       <a className={common_styles.columnTitle}>about</a>
       <p className={styles.description}>
-        Welcome to our session! Here, we discuss various topics and share insights to help you grow and learn. Join us for an engaging and informative experience.
+        水瀬いのりセッション会は、楽器演奏やライブセッションで水瀬いのりさんを応援する非公式コミュニティーです。
+        このサイトでは、次回セッションライブ情報を含むセッション会からのお知らせや、セッション会で演奏した動画のアーカイブを公開しています。
       </p>
     </div>
   );

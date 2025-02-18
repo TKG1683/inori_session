@@ -1,0 +1,57 @@
+.footerContainer
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-7xs) var(--padding-7xs) var(--padding-39xl);
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+    font-size: var(--font-size-2xs);
+}
+
+.footerContainerChild
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--color-black);
+    z-index: 0;
+}
+
+.link
+{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  height: auto;
+  width: 100%;
+  position: relative;
+  line-height: 20px;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.description
+{
+  margin-left: 5rem;
+  vertical-align: bottom;
+  font-size: 1rem;
+  height: auto;
+  width: 100%;
+  position: relative;
+  letter-spacing: -0.5px;
+  line-height: 20px;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}

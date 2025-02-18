@@ -26,45 +26,45 @@ const Informations = ({ className = "" }) => {
 
   return (
     <div className={[common_styles.columnContainer, className].join(" ")}>
-      <div className={styles.frameChild} />
+      <div className={common_styles.columnContainerChild} />
       <a className={common_styles.columnTitle}>information</a>
+      <div className={styles.informationContainer}>
+        <div className={styles.informationContainerChild}>
+          <div className={styles.infoListContainer}>
+            {infoList.slice(0, showAll ? infoList.length : 4).map((info, index) => {
+              const [date, content] = info;
+              const infoDate = new Date(date);
+              const today = new Date();
+              const twoWeeksLater = new Date();
+              twoWeeksLater.setDate(today.getDate() - 14);
+              
+              const isNew = twoWeeksLater <= infoDate;
+              
+              return (
+                <div style={{ marginBottom: "3rem" }}>
+                  <div className={styles.infoItem}>
+                    {date} {isNew && "(new)"} {content}
+                  </div>
+                  <img
+                    className={styles.infoSplitter}
+                    loading="lazy"
+                    alt=""
+                    src="/vector-1.svg"
+                    style={{ marginTop: "1rem" }}
+                  />
+                </div>
+              );
+            })}
+            <button onClick={handleShowAll} className={styles.showMoreButton}>
+              {showAll ? "... show less" : "... show more"}
+            </button>
+          </div>
 
-      <ul>
-        {infoList.slice(0, showAll ? infoList.length : 4).map((info, index) => {
-          const [date, content] = info;
-          const infoDate = new Date(date);
-          const today = new Date();
-          const twoWeeksLater = new Date();
-          twoWeeksLater.setDate(today.getDate() - 14);
-
-          const isNew = twoWeeksLater <= infoDate;
-
-          return (
-            <li key={index} style={{ marginBottom: "10px" }}>
-              <div className={styles.infoItem}>
-                {date} {isNew && "(new)"} {content}
-              </div>
-              <img
-                className={styles.infoSplitter}
-                loading="lazy"
-                alt=""
-                src="/vector-1.svg"
-                style={{ marginTop: "20px" }}
-              />
-            </li>
-          );
-        })}
-      </ul>
-      {infoList.length > 4 && !showAll && (
-        <button onClick={handleShowAll} className={styles.showMoreButton}>
-          ... show more
-        </button>
-      )}
-      {showAll && (
-        <button onClick={handleShowAll} className={styles.showMoreButton}>
-          ... show less
-        </button>
-      )}
+        </div>
+        <div className={styles.informationContainerChild}>
+            <a class="twitter-timeline" data-width="500" data-height="600" href="https://twitter.com/inori_session?ref_src=twsrc%5Etfw">Tweets by inori_session</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
     </div>
   );
 };
