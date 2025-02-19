@@ -14,7 +14,7 @@ const Top = ({ className = "" }) => {
           <div className={styles.columnParent}>
             <a className={styles.column} href="#about">about</a>
             <a className={styles.column} href="#information">information</a>
-            <a className={styles.column} href="#archive">movies</a>
+            <a className={styles.column} href="#movies">movies</a>
           </div>
         </div>
     </div>

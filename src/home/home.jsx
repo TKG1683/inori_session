@@ -20,24 +20,41 @@ const FadeInSection = ({ children, delay = 0 }) => {
   );
 };
 
+const StickyTop = ({children}) => {
+  return (
+    <div style={{
+      position: "sticky",
+      top: "-140px",
+      zIndex: 100,
+    }}>
+      {children}
+    </div>
+  );
+};
+
 const Home = ({ className = "" }) => {
   return (
     <main className={[styles.subtract, className].join(" ")}>
       <section className={styles.homePageContainer}>
-        <FadeInSection delay={0.2}>
-          <Top />
-          <div style={{ marginBottom: "7rem" }} />
-        </FadeInSection>
+      <StickyTop>
+          <FadeInSection delay={0.2}>
+            <Top />
+            <div id="about" /> {/* stickyする要素があるため、ここをaboutの先頭にしておくとgood */}
+            <div style={{ marginBottom: "7rem" }} />
+          </FadeInSection>
+        </StickyTop>
         <FadeInSection delay={0.5}>
           <About />
+          <div id="information" />
           <div style={{ marginBottom: "7rem" }} />
         </FadeInSection>
         <FadeInSection delay={0.8}>
-          <Informations />
+          <Informations ref="information"/>
+          <div id="movies" />
           <div style={{marginBottom: "7rem"}} />
         </FadeInSection>
         <FadeInSection>
-          <Archives />
+          <Archives ref="movies"/>
           <div style={{marginBottom: "7rem"}} />
         </FadeInSection>
         <Footer />

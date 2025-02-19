@@ -27,7 +27,7 @@ const Root = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            overflow: "hidden",
+            // overflow: "hidden",
           }}
         >
           {/* アイコンのアニメーション */}
