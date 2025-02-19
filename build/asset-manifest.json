@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/inori_session/static/css/main.0e04afe4.css",
+    "main.js": "/inori_session/static/js/main.dcc5f20d.js",
+    "static/js/453.24d541f1.chunk.js": "/inori_session/static/js/453.24d541f1.chunk.js",
+    "static/media/img_background.jpg": "/inori_session/static/media/img_background.2cef131b4486525e3a5a.jpg",
+    "index.html": "/inori_session/index.html",
+    "main.0e04afe4.css.map": "/inori_session/static/css/main.0e04afe4.css.map",
+    "main.dcc5f20d.js.map": "/inori_session/static/js/main.dcc5f20d.js.map",
+    "453.24d541f1.chunk.js.map": "/inori_session/static/js/453.24d541f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e04afe4.css",
+    "static/js/main.dcc5f20d.js"
+  ]
+}
