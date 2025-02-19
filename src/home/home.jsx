@@ -7,12 +7,12 @@ import PropTypes from "prop-types";
 import styles from "./home.module.css";
 import { motion } from "framer-motion";
 
-const FadeInSection = ({ children }) => {
+const FadeInSection = ({ children, delay = 0 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.6, delay }}
       viewport={{ once: true, amount: 0.5 }}
     >
       {children}
@@ -24,15 +24,15 @@ const Home = ({ className = "" }) => {
   return (
     <main className={[styles.subtract, className].join(" ")}>
       <section className={styles.homePageContainer}>
-        <FadeInSection>
+        <FadeInSection delay={0.2}>
           <Top />
-          <div style={{marginBottom: "7rem"}} />
+          <div style={{ marginBottom: "7rem" }} />
         </FadeInSection>
-        <FadeInSection>
+        <FadeInSection delay={0.5}>
           <About />
-          <div style={{marginBottom: "7rem"}} />
+          <div style={{ marginBottom: "7rem" }} />
         </FadeInSection>
-        <FadeInSection>
+        <FadeInSection delay={0.8}>
           <Informations />
           <div style={{marginBottom: "7rem"}} />
         </FadeInSection>

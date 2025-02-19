@@ -8,7 +8,7 @@
   font-size: var(--font-size-5xl);
   color: var(--color-white);
   font-family: var(--font-inter);
-  background-image: url('../../public/img_background.jpg'); /* 背景画像を設定 */
+  background-image: url('../../public/img_background.jpg'); 
   background-size: cover; /* 画像をカバーする */
   background-position: center; /* 画像を中央に配置 */
   background-repeat: no-repeat; /* 画像を繰り返さない */
