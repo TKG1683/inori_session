@@ -5,23 +5,41 @@ import Archives from "./04_archive";
 import Footer from "./05_footer";
 import PropTypes from "prop-types";
 import styles from "./home.module.css";
+import { motion } from "framer-motion";
+
+const FadeInSection = ({ children }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const Home = ({ className = "" }) => {
   return (
     <main className={[styles.subtract, className].join(" ")}>
       <section className={styles.homePageContainer}>
-        <div style={{ marginBottom: "7rem" }}>
+        <FadeInSection>
           <Top />
-        </div>
-        <div style={{ marginBottom: "7rem" }}>
+          <div style={{marginBottom: "7rem"}} />
+        </FadeInSection>
+        <FadeInSection>
           <About />
-        </div>
-        <div style={{ marginBottom: "7rem" }}>
+          <div style={{marginBottom: "7rem"}} />
+        </FadeInSection>
+        <FadeInSection>
           <Informations />
-        </div>
-        <div style={{ marginBottom: "7rem" }}>
+          <div style={{marginBottom: "7rem"}} />
+        </FadeInSection>
+        <FadeInSection>
           <Archives />
-        </div>
+          <div style={{marginBottom: "7rem"}} />
+        </FadeInSection>
         <Footer />
       </section>
     </main>
