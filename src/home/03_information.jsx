@@ -62,7 +62,7 @@ const Informations = ({ className = "" }) => {
 
         </div>
         <div className={styles.informationContainerChild}>
-            <a class="twitter-timeline" data-width="300" data-height="400" href="https://twitter.com/inori_session?ref_src=twsrc%5Etfw"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-width="350" data-height="400" href="https://twitter.com/inori_session?ref_src=twsrc%5Etfw"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
     </div>
