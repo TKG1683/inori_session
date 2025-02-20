@@ -1,15 +1,20 @@
 import PropTypes from "prop-types";
 import styles from "./01_top.module.css";
 import common_styles from "./common.module.css";
+import { useMediaQuery } from 'react-responsive';
 
 const Top = ({ className = "" }) => {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   return (
     <div className={[common_styles.columnContainer, className].join(" ")}>
       <div className={styles.topContainerChild} />
-        <div className={styles.rectangleParent}>
-          <div className={styles.frameChild} />
-            <a className={styles.title} href="#">水瀬いのりセッション会</a>
-          </div>
+      <div className={styles.rectangleParent}>
+        <a className={styles.title} href="#">
+          {isMobile ? <>水瀬いのり<br />&ensp;&ensp;セッション会</> : <>水瀬いのりセッション会</>}
+        </a>
+      </div>
+      {!isMobile && (
         <div className={styles.columnContainer}>
           <div className={styles.columnParent}>
             <a className={styles.column} href="#about">about</a>
@@ -17,6 +22,7 @@ const Top = ({ className = "" }) => {
             <a className={styles.column} href="#movies">movies</a>
           </div>
         </div>
+      )}
     </div>
   );
 };

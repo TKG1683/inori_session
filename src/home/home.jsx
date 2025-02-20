@@ -13,14 +13,14 @@ const FadeInSection = ({ children, delay = 0 }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       {children}
     </motion.div>
   );
 };
 
-const StickyTop = ({children}) => {
+const StickyTop = ({ children }) => {
   return (
     <div style={{
       position: "sticky",
@@ -34,31 +34,29 @@ const StickyTop = ({children}) => {
 
 const Home = ({ className = "" }) => {
   return (
-    <main className={[styles.subtract, className].join(" ")}>
-      <section className={styles.homePageContainer}>
+    <main className={[styles.homePageContainer, className].join(" ")}>
       <StickyTop>
-          <FadeInSection delay={0.2}>
-            <Top />
-            <div id="about" /> {/* stickyする要素があるため、ここをaboutの先頭にしておくとgood */}
-            <div style={{ marginBottom: "7rem" }} />
-          </FadeInSection>
-        </StickyTop>
-        <FadeInSection delay={0.5}>
-          <About />
-          <div id="information" />
+        <FadeInSection delay={0.2}>
+          <Top />
+          <div id="about" /> {/* stickyする要素があるため、ここをaboutの先頭にしておくとgood */}
           <div style={{ marginBottom: "7rem" }} />
         </FadeInSection>
-        <FadeInSection delay={0.8}>
-          <Informations ref="information"/>
-          <div id="movies" />
-          <div style={{marginBottom: "7rem"}} />
-        </FadeInSection>
-        <FadeInSection>
-          <Archives ref="movies"/>
-          <div style={{marginBottom: "7rem"}} />
-        </FadeInSection>
-        <Footer />
-      </section>
+      </StickyTop>
+      <FadeInSection delay={0.5}>
+        <About />
+        <div id="information" />
+        <div style={{ marginBottom: "7rem" }} />
+      </FadeInSection>
+      <FadeInSection delay={0.8}>
+        <Informations ref="information" />
+        <div id="movies" />
+        <div style={{ marginBottom: "7rem" }} />
+      </FadeInSection>
+      <FadeInSection>
+        <Archives ref="movies" />
+        <div style={{ marginBottom: "7rem" }} />
+      </FadeInSection>
+      <Footer />
     </main>
   );
 };

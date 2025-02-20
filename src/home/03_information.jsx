@@ -7,7 +7,7 @@ const Informations = ({ className = "" }) => {
   const [infoList, setInfoList] = useState([]);
 
   useEffect(() => {
-    fetch("/assets/update.css")
+    fetch("/inori_session/assets/update.css")
       .then((response) => response.text())
       .then((data) => {
         const infoArray = data
@@ -41,7 +41,7 @@ const Informations = ({ className = "" }) => {
               const isNew = twoWeeksLater <= infoDate;
               
               return (
-                <div style={{ marginBottom: "3rem" }}>
+                <div style={{ marginBottom: "calc(var(--scaler) * 3rem)" }}>
                   <div className={styles.infoItem}>
                     {date} {isNew && "(new)"} {content}
                   </div>
@@ -49,8 +49,8 @@ const Informations = ({ className = "" }) => {
                     className={styles.infoSplitter}
                     loading="lazy"
                     alt=""
-                    src="/vector-1.svg"
-                    style={{ marginTop: "1rem" }}
+                    src="/inori_session/vector-1.svg"
+                    style={{ marginTop: "calc(var(--scaler) * 1rem)" }}
                   />
                 </div>
               );
@@ -62,7 +62,7 @@ const Informations = ({ className = "" }) => {
 
         </div>
         <div className={styles.informationContainerChild}>
-            <a class="twitter-timeline" data-width="500" data-height="600" href="https://twitter.com/inori_session?ref_src=twsrc%5Etfw"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-width="300" data-height="400" href="https://twitter.com/inori_session?ref_src=twsrc%5Etfw"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
     </div>

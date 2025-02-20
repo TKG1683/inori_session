@@ -13,8 +13,6 @@
     var(--padding-7xs);
   box-sizing: border-box;
   gap: var(--gap-14xl);
-  text-align: center;
-  font-size: 5rem;
   color: var(--color-white);
   font-family: var(--font-inter);
 }
@@ -35,7 +33,7 @@
 
 .columnTitle
 {
-    font-size: 3rem;
+    font-size: calc(var(--scaler) * 3rem);
     top: 1rem;
     left: 1rem;
     text-decoration: none;
@@ -43,7 +41,6 @@
     width: auto;
     position: relative;
     letter-spacing: -0.5px;
-    line-height: 20px;
     color: inherit;
     display: inline-block;
     flex-shrink: 0;
