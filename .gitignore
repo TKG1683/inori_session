@@ -21,3 +21,4 @@ yarn-error.log*
 
 # build directory
 /build
+/node_modules/.*
