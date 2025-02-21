@@ -41,7 +41,7 @@ const Informations = ({ className = "" }) => {
               const isNew = twoWeeksLater <= infoDate;
               
               return (
-                <div style={{ marginBottom: "calc(var(--scaler) * 3rem)" }}>
+                <div style={{ marginBottom: "calc(var(--scaler) * 3rem)" }} key={index}>
                   <div className={styles.infoItem}>
                     {date} {isNew && "(new)"} {content}
                   </div>
@@ -55,14 +55,16 @@ const Informations = ({ className = "" }) => {
                 </div>
               );
             })}
-            <button onClick={handleShowAll} className={styles.showMoreButton}>
-              {showAll ? "... show less" : "... show more"}
-            </button>
+            {infoList.length > 4 && (
+              <button onClick={handleShowAll} className={styles.showMoreButton}>
+                {showAll ? "... show less" : "... show more"}
+              </button>
+            )}
           </div>
-
         </div>
         <div className={styles.informationContainerChild}>
-            <a class="twitter-timeline" data-width="350" data-height="400" href="https://twitter.com/inori_session?ref_src=twsrc%5Etfw"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a className="twitter-timeline" data-width="350" data-height="400" href="https://twitter.com/inori_session?ref_src=twsrc%5Etfw"></a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
     </div>

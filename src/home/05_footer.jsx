@@ -1,54 +1,48 @@
 import PropTypes from "prop-types";
 import styles from "./05_footer.module.css";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Footer = ({ className = "" }) => {
   const [isInquiryPopupOpen, setIsInquiryPopupOpen] = useState(false);
-  const [isPrivacyPolicyPopupOpen, setIsPrivacyPolicyPopupOpen] = useState(false);
-
   const openInquiryPopup = () => {
     setIsInquiryPopupOpen(true);
   };
   const closeInquiryPopup = () => {
     setIsInquiryPopupOpen(false);
   };
-
-  const openPrivacyPolicyPopup = () => {
-    setIsPrivacyPolicyPopupOpen(true);
-  }
-  const closePrivacyPolicyPopup = () => {
-    setIsPrivacyPolicyPopupOpen(false);
-  }
-
-  const isPopupOpened = isInquiryPopupOpen || isPrivacyPolicyPopupOpen;
+  
+  const popupVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
 
   return (
     <div className={styles.footerContainer}>
-      {isPopupOpened && (<div onClick={() => { closeInquiryPopup(); closePrivacyPolicyPopup(); }} className={styles.closeLayer}/>)}
       <footer className={styles.footerContainerChild} />
       <div className={styles.description}>
-        <div>
-          <a className={styles.footerButton} onClick={openInquiryPopup}>お問い合わせ先</a> <br />
-          <a className={styles.footerButton} onClick={openPrivacyPolicyPopup}>プライバシーポリシー</a> <br />
+        <div className={styles.buttonContainer}>
+          <a className={styles.footerButton} onClick={openInquiryPopup}>当サイトに関するお問い合わせ</a> <br />
         </div>
-        <div className={`${styles.popupContainer} ${isInquiryPopupOpen ? styles.show : styles.hide}`}>
-          <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <h2 className="text-lg font-bold mb-4">お問い合わせ先</h2>
-            <p className="mb-4">
-              これはポップアップの内容です。ここに任意のコンテンツを追加できます。
-            </p>
+      {isInquiryPopupOpen && (<div onClick={() => { closeInquiryPopup(); }} className={styles.closeLayer}/>)}
+      {isInquiryPopupOpen && (
+        <motion.div
+        className={styles.popupContainer}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        variants={popupVariants}
+        onClick={closeInquiryPopup}
+      >
+        <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
+          <div onClick={closeInquiryPopup} className={styles.closeButton}>×</div>
+          <div className={styles.popupTitle}>当サイトに関するお問い合わせ</div>
+          <div className={styles.popupDescription}>
+            当サイトに関するお問い合わせについては、<a href="https://x.com/inori_session" target="_blank" rel="noopener noreferrer">Xアカウント: @inori_session</a> までお願いいたします。
           </div>
         </div>
-
-        <div className={`${styles.popupContainer} ${isPrivacyPolicyPopupOpen ? styles.show : styles.hide}`}>
-          <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <h2 className="text-lg font-bold mb-4">プライバシーポリシー</h2>
-            <p className="mb-4">
-              これはポップアップの内容です。ここに任意のコンテンツを追加できます。
-            </p>
-          </div>
-        </div>
-
+      </motion.div>
+      )}
         <div style={{ marginBottom: "1rem" }} />
         声優 水瀬いのりさんの⾮公式ファンサイトです。<br />
         水瀬いのりさん および アクセルワン株式会社や関係者とは⼀切関係ありません。<br />

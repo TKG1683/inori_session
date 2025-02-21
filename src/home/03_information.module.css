@@ -9,6 +9,7 @@
 .infoItem
 {
   position: relative;
+  width: calc(var(--scaler) * 28rem);
   left: calc(var(--scaler) * 3rem);
   text-shadow: 1px 0 0 rgba(0, 0, 0, 0.49), 0 1px 0 rgba(0, 0, 0, 0.49),
     -1px 0 0 rgba(0, 0, 0, 0.49), 0 -1px 0 rgba(0, 0, 0, 0.49);
@@ -44,6 +45,7 @@
   flex-wrap: wrap; /* 必要に応じて折り返し */
   gap: calc(var(--scaler) * 3px); /* 動画間の空白を設定 */
   z-index: 1;
+  
 }
 
 .informationContainerChild

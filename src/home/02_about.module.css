@@ -1,7 +1,7 @@
 .description
 {
     top: 0;
-    width: 80%;
+    width: 94%;
     height: auto;
     left: calc(var(--scaler) * 3rem);;
     text-align: left;
