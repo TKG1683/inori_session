@@ -1,0 +1,321 @@
+.precautionContaier
+{
+  width: 100%;
+  height: auto;
+  left: 45%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.precautionsMain
+{
+  height: auto;
+  width: auto;
+  position: relative;
+  z-index: 0;
+  font-family: var(--font_jp);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--text-light-blue);
+}
+
+.rect
+{
+  width: calc(var(--scaler) * 1200px);
+  height: auto;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background-color: rgba(254, 240, 239, 1);
+  max-width: 100%;
+  z-index: 1;
+}
+
+.textSubtitle
+{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: calc(var(--scaler) * 3.5rem);
+  position: relative;
+  display: flex;
+}
+
+.precautionsList
+{
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  text-align: left;
+  list-style: disc;
+}
+
+.precautionsListItem
+{
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-size: calc(var(--scaler) * 1.5rem);
+} 
+
+.infoRect {
+    width: 1333px;
+    height: 409px;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--corner-large);
+    background-color: var(--color-lavenderblush);
+    display: none;
+    max-width: 100%;
+    z-index: 0;
+  }
+  .h3 {
+    margin: 0;
+    width: 202px;
+    height: 109px;
+    position: relative;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+    display: inline-block;
+    flex-shrink: 0;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+  }
+  .div {
+    width: 1137px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    backdrop-filter: blur(4px);
+    max-width: 100%;
+    z-index: 1;
+  }
+  .venueName {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0px var(--padding-9xs);
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: var(--font-size-45xl);
+    font-family: var(--font-rounded-mplus-1c);
+  }
+  .redPinIcon {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin: 0 !important;
+    top: -11px;
+    left: 0px;
+    object-fit: cover;
+    z-index: 2;
+  }
+  .venueInfo {
+    align-self: stretch;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-base);
+    background-color: var(--color-lavenderblush);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-120xl) var(--padding-36xl) var(--padding-xl);
+    box-sizing: border-box;
+    position: relative;
+    gap: var(--gap-28xl);
+    max-width: 100%;
+  }
+  .moreShowButtonIcon {
+    height: 223px;
+    width: 223px;
+    position: absolute;
+    margin: 0 !important;
+    right: 547px;
+    bottom: -181px;
+    z-index: 1;
+  }
+  .b {
+    width: 257px;
+    height: 58px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    z-index: 3;
+  }
+  .p {
+    margin: 0;
+  }
+  .div1 {
+    width: 1099px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    max-width: 100%;
+    z-index: 3;
+  }
+  .rectParent {
+    flex: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--br-base);
+    background-color: var(--color-lavenderblush);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-9xl) var(--padding-36xl) var(--padding-115xl);
+    box-sizing: border-box;
+    gap: var(--gap-28xl);
+    max-width: 100%;
+    z-index: 2;
+  }
+  .moreShowButtonContainer {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    max-width: 100%;
+  }
+  .rect1 {
+    position: absolute;
+    top: 9px;
+    left: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--corner-large);
+    background-color: var(--color-lavenderblush);
+    width: 1333px;
+    height: 103px;
+  }
+  .b1 {
+    position: absolute;
+    top: 0px;
+    left: 31px;
+    display: inline-block;
+    width: 511px;
+    height: 103px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+  }
+  .additionalPrecautionsContain {
+    height: 112px;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+  }
+  .additionalPrecautions {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 0px var(--padding-5xs);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  
+  .venueLocation {
+    width: 1341px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-19xl);
+    max-width: 100%;
+  }
+
+  
+  @media screen and (max-width: 1225px) {
+    .venueInfo {
+      padding-left: var(--padding-8xl);
+      padding-right: var(--padding-8xl);
+      box-sizing: border-box;
+    }
+  
+    .warningContent {
+      padding-left: var(--padding-8xl);
+      padding-right: var(--padding-8xl);
+      box-sizing: border-box;
+    }
+  
+    .rectParent {
+      padding-left: var(--padding-8xl);
+      padding-right: var(--padding-8xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .h3 {
+      font-size: var(--font-size-29xl);
+    }
+  
+    .div {
+      font-size: var(--font-size-32xl);
+    }
+  
+    .venueInfo {
+      gap: var(--gap-4xl);
+    }
+  
+    .b {
+      font-size: var(--font-size-32xl);
+    }
+  
+    .div1 {
+      font-size: var(--font-size-13xl);
+    }
+  
+    .rectParent {
+      gap: var(--gap-4xl);
+      padding-top: var(--padding-xl);
+      padding-bottom: var(--padding-68xl);
+      box-sizing: border-box;
+    }
+  
+    .b1 {
+      font-size: var(--font-size-32xl);
+    }
+  
+    .venueLocation {
+      gap: var(--gap-lgi);
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .h3 {
+      font-size: var(--font-size-10xl);
+    }
+  
+    .div {
+      font-size: var(--font-size-19xl);
+    }
+  
+    .venueInfo {
+      padding-top: var(--padding-71xl);
+      box-sizing: border-box;
+    }
+  
+    .b {
+      font-size: var(--font-size-19xl);
+    }
+  
+    .div1 {
+      font-size: var(--font-size-5xl);
+    }
+  
+    .b1 {
+      font-size: var(--font-size-19xl);
+    }
+  }
+  

@@ -10,16 +10,3 @@
   line-height: normal;
   letter-spacing: normal;
 }
-
-:root
-{
-  --scaler: 1;
-}
-
-@media (max-width: 768px)
-{
-  :root
-  {
-    --scaler: 0.8;
-  }
-}

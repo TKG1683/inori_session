@@ -2,9 +2,8 @@ import Top from "./01_top";
 import About from "./02_about";
 import Informations from "./03_information";
 import Archives from "./04_archive";
-import Footer from "./05_footer";
 import PropTypes from "prop-types";
-import styles from "./home.module.css";
+import styles from "./main.module.css";
 import { motion } from "framer-motion";
 
 const FadeInSection = ({ children, delay = 0 }) => {
@@ -56,7 +55,6 @@ const Home = ({ className = "" }) => {
         <Archives ref="movies" />
         <div style={{ marginBottom: "7rem" }} />
       </FadeInSection>
-      <Footer />
     </main>
   );
 };

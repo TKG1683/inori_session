@@ -6,7 +6,10 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Root from "./pages/root";
+import { motion, AnimatePresence } from "framer-motion";
+
+import Root_main from "./pages/root_main";
+import Root_vol4 from "./pages/root_vol4";
 
 function App() {
   const action = useNavigationType();
@@ -45,9 +48,12 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Root />} />
-    </Routes>
+    <AnimatePresence mode="wait">
+      <Routes>
+        <Route path="/" element={<Root_main />} />
+        <Route path="/vol4" element={<Root_vol4 />} />
+      </Routes>
+    </AnimatePresence>
   );
 }
 

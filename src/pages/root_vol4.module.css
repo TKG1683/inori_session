@@ -1,0 +1,24 @@
+.root {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+:root
+{
+  --scaler: 1;
+  --text-light-blue: rgba(158, 188, 244, 1);
+}
+
+@media (max-width: 768px)
+{
+  :root
+  {
+    --scaler: 0.8;
+  }
+}

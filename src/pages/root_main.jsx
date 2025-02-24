@@ -1,5 +1,7 @@
-import Home from "../home/home";
-import styles from "./root.module.css";
+import Home from "../main/main";
+import Footer from "./footer";
+import styles from "./root_main.module.css";
+import "./root_common.module.css";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -62,6 +64,7 @@ const Root = () => {
         >
           <div className={styles.root}>
             <Home />
+            <Footer />
           </div>
         </motion.div>
       )}

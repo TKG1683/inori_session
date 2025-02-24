@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./05_footer.module.css";
+import styles from "./footer.module.css";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
