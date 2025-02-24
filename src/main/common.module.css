@@ -45,6 +45,7 @@
     color: inherit;
     display: inline-block;
     flex-shrink: 0;
+    font-family: var(--font_eng);
     text-shadow: 1px 0 0 rgba(0, 0, 0, 0.49), 0 1px 0 rgba(0, 0, 0, 0.49),
       -1px 0 0 rgba(0, 0, 0, 0.49), 0 -1px 0 rgba(0, 0, 0, 0.49);
     z-index: 1;

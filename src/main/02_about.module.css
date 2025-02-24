@@ -8,6 +8,7 @@
     z-index: 1;
     position: relative;
     color: black;
-    font-size: calc(var(--scaler) * 2rem);;
-    margin-top: calc(var(--scaler) * 1rem);;
+    font-family: var(--font_jp);
+    font-size: calc(var(--scaler) * 2rem);
+    margin-top: calc(var(--scaler) *description 1rem);
 }
