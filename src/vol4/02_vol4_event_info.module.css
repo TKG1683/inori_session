@@ -18,7 +18,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .eventInfoSubTitle
@@ -63,7 +63,7 @@
 .eventInfoDateTicket {
     width: 100%;
     height: auto;
-    margin-top: calc(var(--scaler) * -600px); /* 余白を作らずに上げる */
+    margin-top: calc(var(--scaler) * -500px); /* 余白を作らずに上げる */
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -73,7 +73,7 @@
 
 
 .kurariCamvasImage {
-    width: 100%;
+    width: calc(var(--scaler) * 1500px);
     height: auto;
     position: relative;
     object-fit: cover;

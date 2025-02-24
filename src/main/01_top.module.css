@@ -10,6 +10,7 @@
   backdrop-filter: blur(4px);
   background-color: var(--color-gainsboro);
   z-index: 0;
+
 }
 
 .rectangleParent
@@ -65,7 +66,7 @@
   padding: 0 var(--padding-53xl);
   box-sizing: border-box;
   z-index: 2;
-  font-family: var(--font-roboto);
+  font-family: var(--font_eng);
 }
 
 .columnParent

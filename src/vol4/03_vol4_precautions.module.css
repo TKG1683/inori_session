@@ -68,7 +68,7 @@
   width: 10rem;
   left: 2rem;
   font-size: calc(var(--scaler) * 1.2rem);
-  font-family: var(--font_en);
+  font-family: var(--font_eng);
   color: var(--color-black); /* Change text color to black */
   font-style: italic; /* Make text italic */
   background-color: var(--color-primary);

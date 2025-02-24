@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "./04_vol4_members.module.css";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const Members = ({ className = "" }) => {
@@ -28,13 +29,23 @@ const Members = ({ className = "" }) => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(1); // 1: Next (右), -1: Back (左)
 
   const handleNext = () => {
+    setDirection(1); // 右にスライド
     setCurrentIndex((prevIndex) => (prevIndex + 1) % members.length);
   };
 
   const handleBack = () => {
+    setDirection(-1); // 左にスライド
     setCurrentIndex((prevIndex) => (prevIndex - 1 + members.length) % members.length);
+  };
+
+  const handleIndicatorClick = (index) => {
+    setDirection(0);
+    if (index !== currentIndex) {
+      setCurrentIndex(index);
+    }
   };
 
   return (
@@ -67,45 +78,61 @@ const Members = ({ className = "" }) => {
               src="./images/arrow-next.svg"
               onClick={handleNext}
             />
-            <div className={styles.descriptionMemberInfo}>
-              <div className={styles.profileContainer}>
-                <div className={styles.profileCard}>
-                  <div className={styles.profileContent}>
-                    <div className={styles.memberImageContainer}>
-                      <img
-                        className={styles.tkgImgIcon}
-                        loading="lazy"
-                        alt=""
-                        src={members[currentIndex].image}
-                      />
-                    </div>
-                    <div className={styles.div}></div>
-                      <p className={styles.nametkg}>
-                        <span>name：</span>
-                        <span className={styles.tkg}>{members[currentIndex].name}</span>
-                      </p>
-                      <p className={styles.nametkg}>
-                        <span>part：</span>
-                        <span className={styles.tkg}>{members[currentIndex].part}</span>
-                        <span className={styles.span}>{`  `}</span>
-                      </p>
-                    </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                className={styles.descriptionMemberInfo}
+                initial={{ opacity: 0, x: direction * -20 }} // Nextのとき左から, Backのとき右から
+                animate={{ opacity: 1, x: 0 }} // 表示時のアニメーション
+                exit={{ opacity: 0, x: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <div className={styles.iconAndNameAndPart}>
+                  <img
+                    className={styles.memberIconImage}
+                    loading="lazy"
+                    alt=""
+                    src={members[currentIndex].image}
+                  />
+                  <div className={styles.descriptionNamePart}>
+                    <p className={styles.nameText}>
+                      <span className={styles.label}>name：</span>
+                      <span className={styles.bold}>{members[currentIndex].name}</span>
+                      <br />
+                      <span className={styles.label}>part：</span>
+                      <span className={styles.bold}>{members[currentIndex].part}</span>
+                    </p>
                   </div>
+
                 </div>
-                <div className={styles.div1}>
-                  <p className={styles.nametkg}>favorite songs:</p>
-                  <p className={styles.nametkg}>
+                <div className={styles.commentAndFavoriteSongs}>
+                  <p className={styles.textTitle}>favorite songs:</p>
+                  <p className={styles.textDescription}>
                     {members[currentIndex].favoriteSongs}
                   </p>
-                  <p className={styles.nametkg}>&nbsp;</p>
-                  <p className={styles.nametkg}>comment:</p>
-                  <p className={styles.nametkg}>{members[currentIndex].comment}</p>
+                  <div style={{ marginBottom: "1rem" }} />
+                  <p className={styles.textTitle}>comment:</p>
+                  <p className={styles.textDescription}>{members[currentIndex].comment}</p>
                 </div>
-              </div>
-            </div>
+
+              </motion.div>
+            </AnimatePresence>
+          </div>
+          <div className={styles.indicatorContainer}>
+            {members.map((_, index) => (
+              <motion.span
+                key={index}
+                className={styles.indicatorDot}
+                onClick={() => handleIndicatorClick(index)}
+                animate={{ scale: index === currentIndex ? 1.4 : 1 }} // 選択中のインジケーターを拡大
+                transition={{ duration: 0.1 }}
+              >
+              </motion.span>
+            ))}
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

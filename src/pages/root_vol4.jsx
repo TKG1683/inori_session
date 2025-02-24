@@ -24,7 +24,7 @@ const Root = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(173, 216, 230, 1)",
+            backgroundColor: "rgb(244, 240, 222)",
             zIndex: 100,
             display: "flex",
             justifyContent: "center",
