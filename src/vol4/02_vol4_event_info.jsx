@@ -6,7 +6,7 @@ const eventDetails = {
   openTime: "Open / 16:30",
   startTime: "Start / 17:00",
   ticketPrice: "￥2,000",
-  venue: "スタジオノア 学芸大店 1Bスタジオ",
+  venue: <a href="https://www.studionoah.jp/gakudai/1bst/" className={styles.link}>スタジオノア 学芸大店 B1スタジオ</a>,
 };
 
 const EventInfo = ({ className = "" }) => {
@@ -18,13 +18,13 @@ const EventInfo = ({ className = "" }) => {
             className={styles.fukidashiImage}
             loading="lazy"
             alt=""
-            src="./fukidashi.png"
+            src="./images/fukidashi.png"
           />
           <div className={styles.eventInfoText}>event info</div>
         </div>
 
         <div className={styles.eventInfoDateTicket}>
-          <img className={styles.kurariCamvasImage} loading="lazy" alt="" src="./kurari_canvas.png" />
+          <img className={styles.kurariCamvasImage} loading="lazy" alt="" src="./images/kurari_canvas.png" />
           <div className={styles.descriptionDateTicket}>
             <p className={styles.textLarge}>
               Date <br />
@@ -57,7 +57,7 @@ const EventInfo = ({ className = "" }) => {
           className={styles.redPinIcon}
           loading="lazy"
           alt=""
-          src="./red-pin@2x.png"
+          src="./images/red-pin.png"
         />
       </div>
     </section>

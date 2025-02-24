@@ -3,7 +3,7 @@
   width: 100%;
   height: auto;
   position: relative;
-  background-image: url('../../public/img_background.jpg'); 
+  background-image: url('../../public/images/img_background.jpg'); 
   background-repeat: no-repeat; /* 画像を繰り返さない */
   background-attachment: fixed; /* スクロールしても背景画像を固定 */
   background-size: cover; /* 画像を全体に表示 */

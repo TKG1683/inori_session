@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
-import styles from "./Members.module.css";
+import styles from "./04_vol4_members.module.css";
 
 const Members = ({ className = "" }) => {
   return (
-    <div className={[styles.members, className].join(" ")}>
+    <div className={[styles.memberContainer, className].join(" ")}>
       <div className={styles.memberInfo}>
         <img
           className={styles.fukidashi032Icon}
           loading="lazy"
           alt=""
-          src="./fukidashi03-1@2x.png"
+          src="./images/fukidashi.png"
         />
         <h3 className={styles.members1}>members</h3>
       </div>
@@ -20,7 +20,7 @@ const Members = ({ className = "" }) => {
               className={styles.arrowBackIcon}
               loading="lazy"
               alt=""
-              src="./arrow-back.svg"
+              src="./images/arrow-back.svg"
             />
           </div>
           <div className={styles.profileContainer}>
@@ -31,7 +31,7 @@ const Members = ({ className = "" }) => {
                     className={styles.tkgImgIcon}
                     loading="lazy"
                     alt=""
-                    src="./tkg-img@2x.png"
+                    src="./images/member_icon/tkg-icon.png"
                   />
                 </div>
                 <div className={styles.div}>
@@ -63,7 +63,7 @@ const Members = ({ className = "" }) => {
               className={styles.arrowBackIcon}
               loading="lazy"
               alt=""
-              src="./arrow-next.svg"
+              src="./images/arrow-next.svg"
             />
           </div>
         </div>

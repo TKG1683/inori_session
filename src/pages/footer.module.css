@@ -61,7 +61,7 @@
   box-sizing: border-box;
   text-align: center;
   background-color: rgba(226, 255, 255, 0.95);
-  z-index: 11; /* Ensure it is on top of other elements */
+  z-index: 999; /* Ensure it is on top of other elements */
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   border-radius: 10px;
@@ -116,7 +116,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 998;
   background-color: rgba(0, 0, 0, 0.5);
 }
 

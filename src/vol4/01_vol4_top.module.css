@@ -29,38 +29,3 @@
   color: var(--text-light-blue);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-.topBarNavigation:hover {
-  background-color: var(--color-gainsboro-200);
-}
-.members {
-  text-decoration: none;
-  flex: 1;
-  position: relative;
-  color: inherit;
-  z-index: 2;
-}
-.topBarNavigation1 {
-  flex: 1;
-  border-radius: var(--br-981xl);
-  background-color: var(--color-gray);
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-3xs) var(--padding-mini) var(--padding-4xs)
-    var(--padding-mid);
-  z-index: 1;
-}

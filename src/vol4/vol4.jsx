@@ -1,7 +1,7 @@
 import Top from "./01_vol4_top";
 import EventInfo from "./02_vol4_event_info";
 import Precaution from "./03_vol4_precautions";
-// import Members from "./Members";
+import Members from "./04_vol4_members";
 import styles from "./vol4.module.css";
 
 
@@ -24,10 +24,7 @@ const vol4 = () => {
       <div id="event_info" />
       <EventInfo />
       <Precaution />
-      {/* <section className={styles.venueDetails}>
-        <FrameComponent1 />
-        <Members />
-      </section> */}
+      <Members />
       
     </div>
   );

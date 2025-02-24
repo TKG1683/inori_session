@@ -29,7 +29,7 @@ const Top = ({ className = "" }) => {
           className={styles.vol4DesktopImage}
           loading="lazy"
           alt=""
-          src="./vol4_desktop.png"
+          src="./images/vol4_desktop.png"
         />
       </div>
       <h3 className={styles.countdownText}>{getCountdownText()}</h3>
