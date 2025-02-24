@@ -1,4 +1,4 @@
-.memberContainer
+.membersContainer
 {
   width: 100%;
   height: auto;
@@ -10,6 +10,153 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.membersChild
+{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.membersSubTitle
+{
+  width: calc(var(--scaler) * 600px);
+  height: calc(var(--scaler) * 600px);
+  right: calc(var(--scaler) * 600px);
+  display: flex;
+  position: relative;
+}
+
+.fukidashiImage
+{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  object-fit: contain;
+  z-index: 5;
+  transform: rotate(-5deg);
+}
+
+.membersText {
+  width: auto;
+  height: auto;
+  top: 45%;
+  left: 45%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  align-items: center;
+  position: absolute;
+  font-size: calc(var(--scaler) * 6rem);
+  font-weight: 400;
+  font-family: var(--font_eng);
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 6;
+}
+
+.membersMain {
+  width: 100%;
+  height: auto;
+  margin-top: calc(var(--scaler) * -600px); /* 余白を作らずに上げる */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+.kurariCamvasImage {
+  width: 100%;
+  height: auto;
+  position: relative;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.descriptionMemberInfo {
+  width: auto;
+  height: auto;
+  margin-top: 45%;
+  margin-left: 47%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 4;
+  font-family: var(--font_jp);
+  color: var(--text-light-blue);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.textLarge {
+  font-size: calc(var(--scaler) * 6rem);
+  margin: 1rem 2rem 0.5rem 2rem;
+  line-height: 1;
+}
+
+.textSmall {
+  font-size: calc(var(--scaler) * 4rem);
+  margin: 0.5rem 2rem 0.5rem 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.navigationButtons {
+  width: 100%;
+  display: flex;
+  margin-top: 39%;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: calc(var(--scaler) * 40px);
+  max-width: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+.arrowBackIcon
+{
+  left: 5%;
+  width: calc(var(--scaler) * 160px);
+  height: calc(var(--scaler) * 160px);
+  position: relative;
+  object-fit: cover;
+  border-radius: calc(var(--scaler) * 160px);
+}
+
+.arrowBackIcon:hover
+{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  scale: 1.1;
+}
+
+.arrowNextIcon
+{
+  right: 12%;
+  width: calc(var(--scaler) * 160px);
+  height: calc(var(--scaler) * 160px);
+  position: absolute;
+  object-fit: cover;
+  z-index: 2;
+  border-radius: calc(var(--scaler) * 160px);
+}
+
+.arrowNextIcon:hover
+{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  scale: 1.1;
+}
+
+
+/* --------------------- */
 
 .fukidashi032Icon {
   height: 100%;
@@ -59,13 +206,7 @@
   flex-shrink: 0;
   z-index: 1;
 }
-.arrowBackWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-181xl) 0px 0px;
-}
+
 .tkgImgIcon {
   width: 165px;
   height: 165px;
@@ -133,16 +274,7 @@
   gap: var(--gap-lgi);
   max-width: 100%;
 }
-.navigationButtons {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0px 0px 0px var(--padding-xl);
-  box-sizing: border-box;
-  gap: var(--gap-27xl);
-  max-width: 100%;
-}
+
 .memberProfiles {
   align-self: stretch;
   display: flex;
