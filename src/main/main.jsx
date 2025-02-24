@@ -1,6 +1,6 @@
 import Top from "./01_top";
 import About from "./02_about";
-import Informations from "./03_information";
+import Information from "./03_information";
 import Archives from "./04_archive";
 import PropTypes from "prop-types";
 import styles from "./main.module.css";
@@ -34,20 +34,21 @@ const StickyTop = ({ children }) => {
 const Home = ({ className = "" }) => {
   return (
     <main className={[styles.homePageContainer, className].join(" ")}>
+      <div id="top" />
       <StickyTop>
         <FadeInSection delay={0.2}>
           <Top />
-          <div id="about" /> {/* stickyする要素があるため、ここをaboutの先頭にしておくとgood */}
-          <div style={{ marginBottom: "7rem" }} />
         </FadeInSection>
       </StickyTop>
+      <div id="about" /> {/* stickyする要素があるため、ここをaboutの先頭にしておくとgood */}
+      <div style={{ marginBottom: "7rem" }} />
       <FadeInSection delay={0.5}>
         <About />
         <div id="information" />
         <div style={{ marginBottom: "7rem" }} />
       </FadeInSection>
       <FadeInSection delay={0.8}>
-        <Informations ref="information" />
+        <Information />
         <div id="movies" />
         <div style={{ marginBottom: "7rem" }} />
       </FadeInSection>

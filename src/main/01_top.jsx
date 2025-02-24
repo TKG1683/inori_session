@@ -6,6 +6,13 @@ import { useMediaQuery } from 'react-responsive';
 const Top = ({ className = "" }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className={[common_styles.columnContainer, className].join(" ")}>
       <div className={styles.topContainerChild} />
@@ -17,9 +24,9 @@ const Top = ({ className = "" }) => {
       {!isMobile && (
         <div className={styles.columnContainer}>
           <div className={styles.columnParent}>
-            <a className={styles.column} href="#about">about</a>
-            <a className={styles.column} href="#information">information</a>
-            <a className={styles.column} href="#movies">movies</a>
+            <a className={styles.column} onClick={() => scrollToSection("about")}>about</a>
+            <a className={styles.column} onClick={() => scrollToSection("information")}>information</a>
+            <a className={styles.column} onClick={() => scrollToSection("movies")}>movies</a>
           </div>
         </div>
       )}

@@ -17,6 +17,13 @@ const Footer = ({ className = "" }) => {
     visible: { opacity: 1 },
   };
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer>
       <div className={styles.footerContainer}>
@@ -58,6 +65,13 @@ const Footer = ({ className = "" }) => {
           </a>
         </div>
       </div>
+      <img
+        className={styles.topButton}
+        loading="lazy"
+        alt=""
+        src="/inori_session/images/top.svg"
+        onClick={() => scrollToSection("top")}
+      />
     </footer>
   );
 };

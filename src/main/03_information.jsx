@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./03_information.module.css";
 import common_styles from "./common.module.css";
 
-const Informations = ({ className = "" }) => {
+const Information = ({ className = "" }) => {
   const [infoList, setInfoList] = useState([]);
 
   useEffect(() => {
@@ -71,8 +71,8 @@ const Informations = ({ className = "" }) => {
   );
 };
 
-Informations.propTypes = {
+Information.propTypes = {
   className: PropTypes.string,
 };
 
-export default Informations;
+export default Information;

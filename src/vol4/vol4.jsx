@@ -29,6 +29,7 @@ const Vol4 = () => {
 
   return (
     <div className={styles.vol4Container}>
+      <div id="top" />
       <header className={styles.topbar}>
         <a className={styles.topbarButton} onClick={() => scrollToSection("event_info")}>event info</a>
         <a className={styles.topbarButton} onClick={() => scrollToSection("members")}>members</a>
