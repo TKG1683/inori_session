@@ -2,51 +2,67 @@
 {
   width: 100%;
   height: auto;
-  position: relative;
-  align-items: flex-start;
-  justify-content: flex-start;
-  /* padding: var(--padding-7xs) var(--padding-7xs) var(--padding-39xl); */
+  position: absolute;
+  align-items: center; /* Center align items */
+  justify-content: space-between; /* Space between items */
+  flex-direction: row; 
+  flex-wrap: wrap;
   box-sizing: border-box;
   text-align: left;
-}
-
-.footerContainerChild
-{
-  width: 100%;
-  height: auto;
-  position: absolute;
-  margin: 0 !important;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.749);
-  z-index: 0;
-}
-
-.link
-{
-  width: 100%;
-  height: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: calc(var(--scaler) * 2rem);;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.76);
 }
 
 .description
 {
-  width: 80%;
+  width: 40%;
   height: auto;
   left: calc(var(--scaler) * 2rem);;
   vertical-align: bottom;
+  flex-direction: column;
   font-size: calc(var(--scaler) * 1rem);;
   color: white;
   position: relative;
   line-height: 20px;
   z-index: 1;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center align items */
+}
+
+.footerButton
+{
+  color: lightblue;
+  width: auto;
+  height: auto;
+  margin-bottom: 1rem;
+  font-size: calc(var(--scaler) * 1.5rem);
+  display: inline-block;
+}
+.footerButton:hover
+{
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.imageContainer
+{
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 40%;
+  margin-top: calc(var(--scaler) * -120px); /* 余白を作らずに上げる */
+  margin-left: 1rem; /* Add margin to the left */
+}
+
+.imageForX
+{
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.imageForX:hover
+{
+  cursor: pointer;
+  scale: 1.1;
 }
 
 .popupContainer
@@ -95,7 +111,7 @@
   padding: 3rem;
   font-size: calc(var(--scaler) * 2rem);;
   color: rgb(0, 0, 0);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font_jp);
   margin-bottom: 1rem;
 }
 
@@ -106,7 +122,7 @@
   padding: 1rem;
   font-size: calc(var(--scaler) * 1.5rem);
   color: rgb(0, 0, 0);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font_jp);
 }
 
 .closeLayer
@@ -120,16 +136,6 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.show
-{
-  opacity: 1;
-}
-
-.hide
-{
-  opacity: 0;
-}
-
 .buttonContainer
 {
   width: 100%;
@@ -140,18 +146,4 @@
   flex-wrap: wrap;
   /* display: flex; */
   gap: 1rem;
-}
-
-.footerButton
-{
-  color: lightblue;
-  width: auto;
-  height: auto;
-  margin-bottom: 1rem;
-  display: inline-block;
-}
-.footerButton:hover
-{
-  color: var(--color-primary);
-  cursor: pointer;
 }

@@ -12,7 +12,7 @@ const FadeInSection = ({ children, delay = 0 }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {children}
     </motion.div>
@@ -53,7 +53,6 @@ const Home = ({ className = "" }) => {
       </FadeInSection>
       <FadeInSection>
         <Archives ref="movies" />
-        <div style={{ marginBottom: "7rem" }} />
       </FadeInSection>
     </main>
   );

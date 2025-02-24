@@ -1,6 +1,6 @@
 .subTitle
 {
-  font-size: 2rem;
+  font-size: calc(var(--scaler) * 2rem);
   top: 1rem;
   left: 2rem;
   text-decoration: none;
@@ -12,6 +12,7 @@
   color: inherit;
   display: inline-block;
   flex-shrink: 0;
+  font-family: var(--font_eng);
   text-shadow: 1px 0 0 rgba(0, 0, 0, 0.49), 0 1px 0 rgba(0, 0, 0, 0.49),
     -1px 0 0 rgba(0, 0, 0, 0.49), 0 -1px 0 rgba(0, 0, 0, 0.49);
   z-index: 1;
@@ -20,22 +21,29 @@
 
 .archiveContainer
 {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap; /* 必要に応じて折り返し */
-  gap: calc(var(--scaler) * 20px); /* 動画間の空白を設定 */
+  gap: calc(var(--scaler) * 5px); /* 動画間の空白を設定 */
   z-index: 1;
 }
 
 .archiveContainerChild
 {
-  flex: 1 1 calc(var(--scaler) * 480px); /* 幅300pxを基準に横並び */
-  max-width: calc(var(--scaler) * 480px); /* 最大幅を設定 */
-  border-radius: 8px; /* 角丸を追加 */
+  width: calc(var(--scaler) * 480px);
+  height: calc(var(--scaler) * 240px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 1;
 }
 
 iframe
 {
-  width: calc(var(--scaler) * 480px);
-  height: calc(var(--scaler) * 270px);
+  width: auto;
+  height: auto;
   border: none;
 }
