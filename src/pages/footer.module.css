@@ -67,8 +67,8 @@
 
 .topButton
 {
-  width: 150px;
-  height: 150px;
+  width: calc(var(--scaler) * 100px);
+  height: auto;
   position: fixed;
   bottom: 20px;
   right: 20px;

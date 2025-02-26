@@ -80,13 +80,23 @@ const Members = ({ className = "" }) => {
             />
             <AnimatePresence mode="wait">
               <motion.div
-                key={currentIndex}
                 className={styles.descriptionMemberInfo}
+                key={currentIndex}
                 initial={{ opacity: 0, x: direction * -20 }} // Nextのとき左から, Backのとき右から
                 animate={{ opacity: 1, x: 0 }} // 表示時のアニメーション
                 exit={{ opacity: 0, x: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
+                drag="x" // 横方向にドラッグ可能に
+                dragPropagation={true} // 子要素にイベント伝播
+                dragConstraints={{ left: 0, right: 0 }} // 画面内でのみドラッグ
+                onDragEnd={(event, info) => {
+                  console.log(info.offset.x);
+                  if (info.offset.x < -50) {
+                    handleBack();
+                  } else if (info.offset.x > 50) {
+                    handleNext();
+                  }
+                }}>
                 <div className={styles.iconAndNameAndPart}>
                   <img
                     className={styles.memberIconImage}
@@ -103,7 +113,6 @@ const Members = ({ className = "" }) => {
                       <span className={styles.bold}>{members[currentIndex].part}</span>
                     </p>
                   </div>
-
                 </div>
                 <div className={styles.commentAndFavoriteSongs}>
                   <p className={styles.textTitle}>favorite songs:</p>
@@ -114,11 +123,10 @@ const Members = ({ className = "" }) => {
                   <p className={styles.textTitle}>comment:</p>
                   <p className={styles.textDescription}>{members[currentIndex].comment}</p>
                 </div>
-
               </motion.div>
             </AnimatePresence>
           </div>
-          <div className={styles.indicatorContainer}>
+          {/* <div className={styles.indicatorContainer}>
             {members.map((_, index) => (
               <motion.span
                 key={index}
@@ -129,7 +137,7 @@ const Members = ({ className = "" }) => {
               >
               </motion.span>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

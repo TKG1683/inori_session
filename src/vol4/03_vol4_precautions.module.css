@@ -26,6 +26,9 @@
 .rect
 {
   width: calc(var(--scaler) * 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(var(--scaler) * 1200px);
   height: auto;
   position: relative;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -33,6 +36,13 @@
   background-color: rgba(254, 240, 239, 1);
   max-width: 100%;
   z-index: 1;
+}
+@media (max-width: 768px)
+{
+  .rect
+  {
+    width: 100%;
+  }
 }
 
 .textSubtitle

@@ -8,6 +8,13 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 768px)
+{
+  .vol4Desktop1Wrapper
+  {
+    max-width: 100%;
+  }
+}
 
 .vol4DesktopImage
 {
@@ -23,7 +30,7 @@
 {
   margin: calc(var(--scaler) * 1.5rem);
   position: relative;
-  font-size: calc(var(--scaler) * 4.5rem);
+  font-size: calc(var(--scaler) * 4rem);
   font-weight: 400;
   font-family: var(--font_jp);
   color: var(--text-light-blue);
