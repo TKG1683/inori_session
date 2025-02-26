@@ -1,7 +1,12 @@
 import PropTypes from "prop-types";
 import styles from "./04_vol4_members.module.css";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/navigation'; // スタイルをインポート
+import 'swiper/css/pagination'; // スタイルをインポート
+import { useState, useEffect } from "react";
+
 
 const Members = ({ className = "" }) => {
   const members = [
@@ -28,25 +33,13 @@ const Members = ({ className = "" }) => {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(1); // 1: Next (右), -1: Back (左)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  const handleNext = () => {
-    setDirection(1); // 右にスライド
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % members.length);
-  };
-
-  const handleBack = () => {
-    setDirection(-1); // 左にスライド
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + members.length) % members.length);
-  };
-
-  const handleIndicatorClick = (index) => {
-    setDirection(0);
-    if (index !== currentIndex) {
-      setCurrentIndex(index);
-    }
-  };
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className={[styles.membersContainer, className].join(" ")}>
@@ -63,81 +56,46 @@ const Members = ({ className = "" }) => {
 
         <div className={styles.membersMain}>
           <img className={styles.kurariCamvasImage} loading="lazy" alt="" src="./images/kurari_canvas.png" />
-          <div className={styles.navigationButtons}>
-            <img
-              className={styles.arrowBackIcon}
-              loading="lazy"
-              alt=""
-              src="./images/arrow-back.svg"
-              onClick={handleBack}
-            />
-            <img
-              className={styles.arrowNextIcon}
-              loading="lazy"
-              alt=""
-              src="./images/arrow-next.svg"
-              onClick={handleNext}
-            />
-            <AnimatePresence mode="wait">
-              <motion.div
-                className={styles.descriptionMemberInfo}
-                key={currentIndex}
-                initial={{ opacity: 0, x: direction * -20 }} // Nextのとき左から, Backのとき右から
-                animate={{ opacity: 1, x: 0 }} // 表示時のアニメーション
-                exit={{ opacity: 0, x: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                drag="x" // 横方向にドラッグ可能に
-                dragPropagation={true} // 子要素にイベント伝播
-                dragConstraints={{ left: 0, right: 0 }} // 画面内でのみドラッグ
-                onDragEnd={(event, info) => {
-                  console.log(info.offset.x);
-                  if (info.offset.x < -50) {
-                    handleBack();
-                  } else if (info.offset.x > 50) {
-                    handleNext();
-                  }
-                }}>
-                <div className={styles.iconAndNameAndPart}>
-                  <img
-                    className={styles.memberIconImage}
-                    loading="lazy"
-                    alt=""
-                    src={members[currentIndex].image}
-                  />
-                  <div className={styles.descriptionNamePart}>
-                    <p className={styles.nameText}>
-                      <span className={styles.label}>name：</span>
-                      <span className={styles.bold}>{members[currentIndex].name}</span>
-                      <br />
-                      <span className={styles.label}>part：</span>
-                      <span className={styles.bold}>{members[currentIndex].part}</span>
-                    </p>
+          <div className={styles.swiperContainer}>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            navigation={!isMobile}
+            loop={true}
+            pagination={{ clickable: true }}    
+            className={styles.swiperContainer}
+          >
+            {members.map((member) => (
+              <SwiperSlide className={styles.slide}>
+                <div className={styles.descriptionMemberInfo}>
+                  <div className={styles.iconAndNameAndPart}>
+                    <img
+                      className={styles.memberIconImage}
+                      loading="lazy"
+                      alt=""
+                      src={member.image}
+                    />
+                    <div className={styles.descriptionNamePart}>
+                      <p className={styles.nameText}>
+                        <span className={styles.label}>name：</span>
+                        <span className={styles.bold}>{member.name}</span>
+                        <br />
+                        <span className={styles.label}>part：</span>
+                        <span className={styles.bold}>{member.part}</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className={styles.commentAndFavoriteSongs}>
+                    <p className={styles.textTitle}>favorite songs:</p>
+                    <p className={styles.textDescription}>{member.favoriteSongs}</p>
+                    <div style={{ marginBottom: "1rem" }} />
+                    <p className={styles.textTitle}>comment:</p>
+                    <p className={styles.textDescription}>{member.comment}</p>
                   </div>
                 </div>
-                <div className={styles.commentAndFavoriteSongs}>
-                  <p className={styles.textTitle}>favorite songs:</p>
-                  <p className={styles.textDescription}>
-                    {members[currentIndex].favoriteSongs}
-                  </p>
-                  <div style={{ marginBottom: "1rem" }} />
-                  <p className={styles.textTitle}>comment:</p>
-                  <p className={styles.textDescription}>{members[currentIndex].comment}</p>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-          {/* <div className={styles.indicatorContainer}>
-            {members.map((_, index) => (
-              <motion.span
-                key={index}
-                className={styles.indicatorDot}
-                onClick={() => handleIndicatorClick(index)}
-                animate={{ scale: index === currentIndex ? 1.4 : 1 }} // 選択中のインジケーターを拡大
-                transition={{ duration: 0.1 }}
-              >
-              </motion.span>
+              </SwiperSlide>
             ))}
-          </div> */}
+          </Swiper>
+          </div>
         </div>
       </div>
     </div>

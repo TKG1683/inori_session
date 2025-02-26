@@ -13,6 +13,7 @@
 
 .membersChild
 {
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -22,95 +23,171 @@
 
 .membersSubTitle
 {
-  width: calc(var(--scaler) * 600px);
-  height: calc(var(--scaler) * 600px);
-  right: calc(var(--scaler) * 600px);
+  width: 100%;
+  height: auto;
   display: flex;
+  object-fit: cover;
   position: relative;
 }
 
 .fukidashiImage
 {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  width: 30%;
+  height: auto;
+  position: relative;
   object-fit: contain;
-  z-index: 5;
+  z-index: 1;
   transform: rotate(-5deg);
 }
 
 .membersText {
-  width: auto;
+  width: 100%;
   height: auto;
-  top: 45%;
-  left: 45%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%) rotate(-25deg);
+  left: -48%;
+  margin-top: 6%;
+  transform: rotate(-25deg);
   align-items: center;
-  position: absolute;
-  font-size: calc(var(--scaler) * 6rem);
+  position: relative;
+  font-size: 4rem;
   font-weight: 400;
   font-family: var(--font_eng);
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 6;
+  z-index: 1;
+}
+@media (max-width: 768px)
+{
+    .membersSubTitle
+    {
+        left: -8%;
+    }
+    .fukidashiImage
+    {
+        width: 60%;
+    }
+    .membersText
+    {
+        left: -45%;
+        margin-top: 10%;
+        font-size: 2.5rem;
+    }
 }
 
 .membersMain {
   width: 100%;
   height: auto;
-  margin-top: calc(var(--scaler) * -500px); /* 余白を作らずに上げる */
+  margin-top: -60%;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   position: relative;
-  box-sizing: border-box;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px)
+{
+    .membersMain
+    {
+        margin-top: -69%;
+    }
 }
 
 .kurariCamvasImage {
-  width: calc(var(--scaler) * 1500px);
+  width: 70%;
+  max-width: calc(var(--scaler) * 1200px);
   height: auto;
+  left: 0;
+  margin-top: 40%;
   position: relative;
   object-fit: cover;
-  z-index: 3;
+  z-index: 0;
+}
+@media (max-width: 768px)
+{
+  .kurariCamvasImage
+  {
+      width: 130%;
+  }
+}
+
+.swiperContainer {
+  width: 900px;
+  max-width: 100%;
+  height: 570px;
+  max-height: 100%;
+  bottom: 5%;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  align-items: flex-start;
+  z-index: 1;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px)
+{
+  .swiperContainer
+  {
+    height: auto;
+    bottom: 9%;
+  }
+}
+
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 0;
 }
 
 .descriptionMemberInfo {
-  width: 60%;
+  width: 90%;
   height: auto;
-  margin-top: calc(var(--scaler) * -200px);
-  margin-left: calc(var(--scaler) * 50px);
   position: relative;
-  z-index: 4;
+  margin-left: auto;
+  margin-right: auto;
   font-family: var(--font_jp);
   color: var(--text-light-blue);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  background-color: rgba(229, 211, 255, 0.388);
-  border-radius: 30px;
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  background-color: rgba(229, 211, 255, 0.612);
+}
+@media (max-width: 768px)
+{
+  .descriptionMemberInfo
+  {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
 }
 
 .iconAndNameAndPart
 {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: calc(var(--scaler) * 40px);
   max-width: 100%;
   position: relative;
-  z-index: 5;
+  z-index: -100;
 }
 
 .memberIconImage {
-  width: calc(var(--scaler) * 250px);
-  height: calc(var(--scaler) * 250px);
+  width: calc(var(--scaler) * 150px);
+  height: auto;
   position: relative;
   object-fit: cover;
   z-index: 1;
+  border-radius: 50%;
 }
 
 .descriptionNamePart
@@ -127,7 +204,7 @@
 }
 
 .nameText {
-  font-size: calc(var(--scaler) * 3.5rem);
+  font-size: calc(var(--scaler) * 2.5rem);
   font-family: var(--font_jp);
   color: var(--text-light-blue);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -137,7 +214,8 @@
 
 .label {
   display: inline-block;
-  width: 15rem;
+  width: auto;
+  margin-left: 5px;
   text-align: right;
 }
 
@@ -169,79 +247,22 @@
   letter-spacing: 0.1em;
 }
 
-.navigationButtons {
-  width: 100%;
-  display: flex;
-  margin-top: 39%;
-  flex-direction: row;
-  align-items: flex-start;
-  box-sizing: border-box;
-  gap: calc(var(--scaler) * 40px);
-  max-width: 100%;
-  position: absolute;
-  z-index: 3;
-}
-
-.arrowBackIcon
+@media (max-width: 768px)
 {
-  left: 5%;
-  width: calc(var(--scaler) * 160px);
-  height: calc(var(--scaler) * 160px);
-  position: relative;
-  object-fit: cover;
-  border-radius: calc(var(--scaler) * 160px);
-}
-
-.arrowBackIcon:hover
-{
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.1);
-  scale: 1.1;
-}
-
-.arrowNextIcon
-{
-  right: 12%;
-  width: calc(var(--scaler) * 160px);
-  height: calc(var(--scaler) * 160px);
-  position: absolute;
-  object-fit: cover;
-  z-index: 2;
-  border-radius: calc(var(--scaler) * 160px);
-}
-
-.arrowNextIcon:hover
-{
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.1);
-  scale: 1.1;
-}
-
-.indicatorContainer {
-  width: 100%;
-  display: flex;
-  margin-top: 64%;
-  margin-left: -5%;
-  flex-direction: row;
-  align-items: flex-start;
-  box-sizing: border-box;
-  gap: calc(var(--scaler) * 40px);
-  max-width: 100%;
-  position: absolute;
-  z-index: 3;
-  align-items: center;
-  justify-content: center;
-}
-
-.indicatorDot {
-  width: 12px;
-  height: 12px;
-  background-color: #a2a0a0;
-  border-radius: 50%;
-  transition: all 0.2s ease-in-out;
-}
-
-.indicatorDot:hover {
-  cursor: pointer;
-  background-color: #4c4c4c;
+  .memberIconImage
+  {
+    width: calc(var(--scaler) * 100px);
+  }
+  .nameText
+  {
+    font-size: 1.4rem;
+  }
+  .textTitle
+  {
+    font-size: 1.2rem;
+  }
+  .textDescription
+  {
+    font-size: 1.3rem;
+  }
 }

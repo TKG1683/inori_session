@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "./footer.module.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Footer = ({ className = "" }) => {
@@ -23,6 +23,16 @@ const Footer = ({ className = "" }) => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const [isTopButtonVisible, setIsTopButtonVisible] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsTopButtonVisible(window.scrollY > 50); // 50px以上スクロールしたら表示
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <footer>
@@ -65,13 +75,19 @@ const Footer = ({ className = "" }) => {
           </a>
         </div>
       </div>
-      <img
-        className={styles.topButton}
-        loading="lazy"
-        alt=""
-        src="/inori_session/images/top.svg"
-        onClick={() => scrollToSection("top")}
-      />
+      {isTopButtonVisible && (
+        <motion.img
+          className={styles.topButton}
+          loading="lazy"
+          alt="Top Button"
+          src="/inori_session/images/top.svg"
+          onClick={() => scrollToSection("top")}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.3 }}
+        />
+      )}
     </footer>
   );
 };
