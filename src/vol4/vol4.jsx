@@ -35,18 +35,22 @@ const Vol4 = () => {
         <a className={styles.topbarButton} onClick={() => scrollToSection("members")}>members</a>
         <Link to="/" className={styles.topbarButton}>home</Link>
       </header>
+
       <FadeInSection delay={0.1}>
-      <Top />
+        <Top />
       </FadeInSection>
+
       <FadeInSection delay={0.3}>
-      <div id="event_info" />
-      <EventInfo />
-      <Precaution />
+        <div id="event_info" />
+        <EventInfo />
+        <Precaution />
       </FadeInSection>
+
       <FadeInSection delay={0.2}>
-      <div id="members" />
-      <Members />
+        <div id="members" />
+        <Members />
       </FadeInSection>
+
     </div>
   );
 };
