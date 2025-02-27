@@ -1,18 +1,17 @@
 .infoSplitter
 {
-  position: absolute;
-  left: calc(var(--scaler) * 2.5rem);
-  width: calc(var(--scaler) * 28rem);
+  width: 97%;
+  left: 4%;
+  position: relative;
   height: auto;
 }
 
 .infoItem
 {
+  width: 97%;
+  left: 4%;
   position: relative;
-  width: calc(var(--scaler) * 28rem);
-  left: calc(var(--scaler) * 3rem);
-  text-shadow: 1px 0 0 rgba(0, 0, 0, 0.49), 0 1px 0 rgba(0, 0, 0, 0.49),
-    -1px 0 0 rgba(0, 0, 0, 0.49), 0 -1px 0 rgba(0, 0, 0, 0.49);
+  color: black;
   font-family: var(--font_jp);
   font-size: calc(var(--scaler) * 1.5rem);
 }
@@ -40,19 +39,19 @@
 
 .informationContainer
 {
+  width: 100%;
   display: flex;
   margin-top: calc(var(--scaler) * 1rem);
   flex-wrap: wrap;
-  gap: calc(var(--scaler) * 3px);
+  gap: 2%;
   z-index: 1;
-  
 }
 
 .informationContainerChild
 {
-  width: calc(var(--scaler) * 500px);
-  max-width: 90%;
-  text-align: left; /* 左揃えに設定 */
+  width: calc(var(--scaler) * 800px);
+  max-width: 98%;
+  text-align: left;
 }
 
 .infoListContainer

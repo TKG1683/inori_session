@@ -19,7 +19,8 @@ body {
   /* Colors */
   --color-white: #fff;
   --color-black: #000;
-  --color-gainsboro: rgba(217, 217, 217, 0.35);
+  --color-gainsboro: rgba(255, 238, 222, 0.578);
+  --color-titles: rgb(174, 240, 255);
 
   /* Gaps */
   --gap-11xl: 30px;

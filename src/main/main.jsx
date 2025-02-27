@@ -34,13 +34,18 @@ const StickyTop = ({ children }) => {
 const Home = ({ className = "" }) => {
   return (
     <main className={[styles.homePageContainer, className].join(" ")}>
+      <img
+        className={styles.backgroundImage}
+        src="/inori_session/images/img_background.jpg"
+        alt=""
+      />
       <div id="top" />
       <StickyTop>
         <FadeInSection delay={0.2}>
           <Top />
         </FadeInSection>
       </StickyTop>
-      <div id="about" /> {/* stickyする要素があるため、ここをaboutの先頭にしておくとgood */}
+      <div id="about" />
       <div style={{ marginBottom: "7rem" }} />
       <FadeInSection delay={0.5}>
         <About />

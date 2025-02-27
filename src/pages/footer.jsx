@@ -51,28 +51,28 @@ const Footer = ({ className = "" }) => {
               <div onClick={closeInquiryPopup} className={styles.closeButton}>×</div>
               <div className={styles.popupTitle}>当サイトに関するお問い合わせ</div>
               <div className={styles.popupDescription}>
-                当サイトに関するお問い合わせについては、<a href="https://x.com/inori_session" target="_blank" rel="noopener noreferrer">Xアカウント: @inori_session</a> までお願いいたします。
+                当サイトに関するお問い合わせについては、Xアカウント: <a href="https://x.com/inori_session" target="_blank" rel="noopener noreferrer">@inori_session</a> までお願いいたします。
               </div>
             </div>
           </motion.div>
         )}
         {/* ------------ footer main ----------------- */}
-        <div className={styles.description}>
           <div className={styles.buttonContainer}>
-            <a className={styles.footerButton} onClick={openInquiryPopup}>当サイトに関するお問い合わせ</a> <br />
+            <a className={styles.footerButton} onClick={openInquiryPopup}>当サイトに関するお問い合わせはこちら</a> <br />
           </div>
+        <div className={styles.description}>
           <div style={{ marginBottom: "1rem" }}>
             声優 水瀬いのりさんの⾮公式ファンサイトです。<br />
             水瀬いのりさん および アクセルワン株式会社や関係者とは⼀切関係ありません。<br />
             当サイトで使⽤している画像の著作権・肖像権等は各権利者に帰属いたします。<br />
             当サイトのコンテンツの無断転載・無断複製を禁じます。<br />
           </div>
-        </div>
 
-        <div className={styles.imageContainer}>
-          <a href="https://x.com/inori_session" target="_blank" rel="noopener noreferrer">
-            <img src="/inori_session/images/xicon.png" alt="X Icon" className={styles.imageForX} />
-          </a>
+          <div className={styles.imageContainer}>
+            <a href="https://x.com/inori_session" target="_blank" rel="noopener noreferrer">
+              <img src="/inori_session/images/xicon.png" alt="X Icon" className={styles.imageForX} />
+            </a>
+          </div>
         </div>
       </div>
       {isTopButtonVisible && (

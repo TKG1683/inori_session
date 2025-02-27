@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import styles from "./03_information.module.css";
+import { motion, AnimatePresence } from "framer-motion";
 import common_styles from "./common.module.css";
 
 const Information = ({ className = "" }) => {
@@ -31,6 +32,7 @@ const Information = ({ className = "" }) => {
       <div className={styles.informationContainer}>
         <div className={styles.informationContainerChild}>
           <div className={styles.infoListContainer}>
+            <AnimatePresence>
             {infoList.slice(0, showAll ? infoList.length : 4).map((info, index) => {
               const [date, content] = info;
               const infoDate = new Date(date);
@@ -41,7 +43,15 @@ const Information = ({ className = "" }) => {
               const isNew = twoWeeksLater <= infoDate;
               
               return (
-                <div style={{ marginBottom: "calc(var(--scaler) * 3rem)" }} key={index}>
+                <motion.div 
+                  style={{ marginBottom: "calc(var(--scaler) * 3rem)" }}
+                  key={index}
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  layout
+                >
                   <div className={styles.infoItem}>
                     {date} {isNew && "(new)"} {content}
                   </div>
@@ -52,9 +62,10 @@ const Information = ({ className = "" }) => {
                     src="/inori_session/vector-1.svg"
                     style={{ marginTop: "calc(var(--scaler) * 1rem)" }}
                   />
-                </div>
+                </motion.div>
               );
             })}
+            </AnimatePresence>
             {infoList.length > 4 && (
               <button onClick={handleShowAll} className={styles.showMoreButton}>
                 {showAll ? "... show less" : "... show more"}
