@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/inori_session/static/css/main.9ea7e496.css",
-    "main.js": "/inori_session/static/js/main.e55726da.js",
+    "main.css": "/inori_session/static/css/main.10fd98c4.css",
+    "main.js": "/inori_session/static/js/main.623a3605.js",
     "static/js/453.24d541f1.chunk.js": "/inori_session/static/js/453.24d541f1.chunk.js",
-    "static/media/img_background.jpg": "/inori_session/static/media/img_background.2cef131b4486525e3a5a.jpg",
     "index.html": "/inori_session/index.html",
-    "main.9ea7e496.css.map": "/inori_session/static/css/main.9ea7e496.css.map",
-    "main.e55726da.js.map": "/inori_session/static/js/main.e55726da.js.map",
+    "main.10fd98c4.css.map": "/inori_session/static/css/main.10fd98c4.css.map",
+    "main.623a3605.js.map": "/inori_session/static/js/main.623a3605.js.map",
     "453.24d541f1.chunk.js.map": "/inori_session/static/js/453.24d541f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ea7e496.css",
-    "static/js/main.e55726da.js"
+    "static/css/main.10fd98c4.css",
+    "static/js/main.623a3605.js"
   ]
 }
