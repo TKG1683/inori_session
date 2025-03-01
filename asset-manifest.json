@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/inori_session/static/css/main.3fa24dc0.css",
+    "main.css": "/inori_session/static/css/main.169f8681.css",
     "main.js": "/inori_session/static/js/main.13765644.js",
     "static/js/453.24d541f1.chunk.js": "/inori_session/static/js/453.24d541f1.chunk.js",
     "index.html": "/inori_session/index.html",
-    "main.3fa24dc0.css.map": "/inori_session/static/css/main.3fa24dc0.css.map",
+    "main.169f8681.css.map": "/inori_session/static/css/main.169f8681.css.map",
     "main.13765644.js.map": "/inori_session/static/js/main.13765644.js.map",
     "453.24d541f1.chunk.js.map": "/inori_session/static/js/453.24d541f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fa24dc0.css",
+    "static/css/main.169f8681.css",
     "static/js/main.13765644.js"
   ]
 }
