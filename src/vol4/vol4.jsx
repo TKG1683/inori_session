@@ -1,6 +1,7 @@
 import Top from "./01_vol4_top";
 import EventInfo from "./02_vol4_event_info";
 import Precaution from "./03_vol4_precautions";
+import Registration from "./03-2_vol4_registration";
 import Members from "./04_vol4_members";
 import styles from "./vol4.module.css";
 import { Link } from "react-router-dom";
@@ -44,6 +45,7 @@ const Vol4 = () => {
         <div id="event_info" />
         <EventInfo />
         <Precaution />
+        <Registration />
       </FadeInSection>
 
       <FadeInSection delay={0.2}>

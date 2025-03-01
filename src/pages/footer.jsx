@@ -70,7 +70,7 @@ const Footer = ({ className = "" }) => {
 
           <div className={styles.imageContainer}>
             <a href="https://x.com/inori_session" target="_blank" rel="noopener noreferrer">
-              <img src="/inori_session/images/xicon.png" alt="X Icon" className={styles.imageForX} />
+              <img src="/inori_session/images/x-icon.png" alt="X Icon" className={styles.imageForX} />
             </a>
           </div>
         </div>

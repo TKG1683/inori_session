@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation'; // スタイルをインポート
 import 'swiper/css/pagination'; // スタイルをインポート
 import { useState, useEffect } from "react";
+import { ins } from "framer-motion/client";
 
 
 const Members = ({ className = "" }) => {
@@ -16,6 +17,9 @@ const Members = ({ className = "" }) => {
       favoriteSongs: "旅の途中、三月と群青、Well Wishing Word",
       comment: "まさかのドラムワンマン運転！がんばります…！",
       image: "./images/member_icon/tkg-icon.jpg",
+      X:"https://x.com/azucat1683",
+      instagram:"https://www.instagram.com/tkg1683/",
+      youtube:"https://www.youtube.com/@tekejinn",
     },
     {
       name: "Gensan",
@@ -23,6 +27,9 @@ const Members = ({ className = "" }) => {
       favoriteSongs: "REAL-EYES、約束のアステリズム、brave climber",
       comment: "いのりの涙を受け止めるために、全力で演奏します。",
       image: "./images/member_icon/gensan-icon.jpg",
+      X:"https://x.com/bassbro1130",
+      instagram:"",
+      youtube:"https://www.youtube.com/@gensanjb9223",
     },
     {
       name: "親フラ",
@@ -30,8 +37,33 @@ const Members = ({ className = "" }) => {
       favoriteSongs: "クリスタライズ、Kitty Cat Adventure",
       comment: "速弾きします。",
       image: "./images/member_icon/ParentFlash-icon.jpg",
+      X:"https://x.com/ParentFlash",
+      instagram:"",
+      youtube:"",
     },
   ];
+
+  const createMemberSnsIcon = (member) => {
+    return (
+      <div className={styles.snsIcons}>
+        {member.X !== "" && (
+          <a href={member.X} target="_blank" rel="noopener noreferrer">
+            <img src="/inori_session/images/x-icon.png" alt="" className={styles.snsIcon} />
+          </a>
+        )}
+        {member.instagram !== "" && (
+          <a href={member.instagram} target="_blank" rel="noopener noreferrer">
+            <img src="/inori_session/images/instagram-icon.png" alt="" className={styles.snsIcon} />
+          </a>
+        )}
+        {member.youtube !== "" && (
+          <a href={member.youtube} target="_blank" rel="noopener noreferrer">
+            <img src="/inori_session/images/yt-icon.png" alt="" className={styles.snsIcon} />
+          </a>
+        )}
+      </div>
+    );
+  };
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -83,7 +115,17 @@ const Members = ({ className = "" }) => {
                         <span className={styles.bold}>{member.part}</span>
                       </p>
                     </div>
+                    {!isMobile && (
+                      <div>
+                        {createMemberSnsIcon(member)}
+                      </div>
+                    )}
                   </div>
+                  {isMobile && (
+                      <div>
+                        {createMemberSnsIcon(member)}
+                      </div>
+                    )}
                   <div className={styles.commentAndFavoriteSongs}>
                     <p className={styles.textTitle}>favorite songs:</p>
                     <p className={styles.textDescription}>{member.favoriteSongs}</p>

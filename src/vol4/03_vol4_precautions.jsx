@@ -122,18 +122,6 @@ const Precautions = ({ className = "" }) => {
             {showAll ? "... show less" : "... show more"}
           </button>
         </div>
-        {/* <div className={styles.additionalPrecautions}>
-          <div className={styles.additionalPrecautionsContain}>
-            <div className={styles.rect1} />
-            <b className={styles.b1}>その他注意事項</b>
-          </div>
-          <img
-            className={styles.moreShowButtonIcon}
-            loading="lazy"
-            alt=""
-            src="./more-show-button.svg"
-          />
-        </div> */}
       </div>
     </div>
   );
