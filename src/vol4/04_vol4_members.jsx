@@ -47,7 +47,7 @@ const Members = ({ className = "" }) => {
     return (
       <div className={styles.snsIcons}>
         {member.X !== "" && (
-          <a href={member.X} target="_blank" rel="noopener noreferrer">
+          <a href={member.X} target="_blank" rel="noopener noreferrer" className={styles.forX}>
             <img src="/inori_session/images/icon-x.png" alt="" className={styles.snsIcon} />
           </a>
         )}
