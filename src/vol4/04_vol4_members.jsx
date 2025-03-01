@@ -48,17 +48,17 @@ const Members = ({ className = "" }) => {
       <div className={styles.snsIcons}>
         {member.X !== "" && (
           <a href={member.X} target="_blank" rel="noopener noreferrer">
-            <img src="/inori_session/images/x-icon.png" alt="" className={styles.snsIcon} />
+            <img src="/inori_session/images/icon-x.png" alt="" className={styles.snsIcon} />
           </a>
         )}
         {member.instagram !== "" && (
           <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-            <img src="/inori_session/images/instagram-icon.png" alt="" className={styles.snsIcon} />
+            <img src="/inori_session/images/icon-ig.png" alt="" className={styles.snsIcon} />
           </a>
         )}
         {member.youtube !== "" && (
           <a href={member.youtube} target="_blank" rel="noopener noreferrer">
-            <img src="/inori_session/images/yt-icon.png" alt="" className={styles.snsIcon} />
+            <img src="/inori_session/images/icon-yt.png" alt="" className={styles.snsIcon} />
           </a>
         )}
       </div>
