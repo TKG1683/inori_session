@@ -70,7 +70,7 @@ const Footer = ({ className = "" }) => {
 
           <div className={styles.imageContainer}>
             <a href="https://x.com/inori_session" target="_blank" rel="noopener noreferrer">
-              <img src="/inori_session/images/icon-x.png" alt="X Icon" className={styles.imageForX} />
+              <img src="/images/icon-x.png" alt="X Icon" className={styles.imageForX} />
             </a>
           </div>
         </div>
@@ -80,7 +80,7 @@ const Footer = ({ className = "" }) => {
           className={styles.topButton}
           loading="lazy"
           alt="Top Button"
-          src="/inori_session/images/top.svg"
+          src="/images/top.svg"
           onClick={() => scrollToSection("top")}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

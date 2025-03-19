@@ -5,6 +5,7 @@ import Archives from "./04_archive";
 import PropTypes from "prop-types";
 import styles from "./main.module.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const FadeInSection = ({ children, delay = 0 }) => {
   return (
@@ -36,7 +37,7 @@ const Home = ({ className = "" }) => {
     <main className={[styles.homePageContainer, className].join(" ")}>
       <img
         className={styles.backgroundImage}
-        src="/inori_session/images/img_background.jpg"
+        src="/images/img_background.jpg"
         alt=""
       />
       <div id="top" />
@@ -45,6 +46,14 @@ const Home = ({ className = "" }) => {
           <Top />
         </FadeInSection>
       </StickyTop>
+
+      <FadeInSection delay={0.2}>
+        <p className={styles.specialDescription}>
+          第4回セッション会開催決定！！<br />
+          詳細は<Link to="/vol4">特設ページ</Link>をご確認ください！！
+        </p>
+      </FadeInSection>
+
       <div id="about" />
       <div style={{ marginBottom: "7rem" }} />
       <FadeInSection delay={0.5}>

@@ -5,36 +5,9 @@ body {
   line-height: normal;
 }
 :root {
-  /* fonts */
-  --font-inter: Inter;
-  --font-roboto: Roboto;
-
-  /* font sizes */
-  --font-size-2xs: 11px;
-  --font-size-xs: 12px;
-  --font-size-5xl: 24px;
-  --font-size-smi: 13px;
-  --font-size-xl: 20px;
-
   /* Colors */
   --color-white: #fff;
   --color-black: #000;
   --color-gainsboro: rgba(255, 238, 222, 0.578);
   --color-titles: rgb(174, 240, 255);
-
-  /* Gaps */
-  --gap-11xl: 30px;
-  --gap-46xl: 65px;
-  --gap-14xl: 33px;
-
-  /* Paddings */
-  --padding-7xs: 6px;
-  --padding-39xl: 58px;
-  --padding-6xs: 7px;
-  --padding-73xl: 92px;
-  --padding-xl: 20px;
-  --padding-sm: 14px;
-  --padding-158xl: 177px;
-  --padding-8xs: 5px;
-  --padding-53xl: 72px;
 }

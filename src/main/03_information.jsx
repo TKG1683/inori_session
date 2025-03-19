@@ -8,7 +8,7 @@ const Information = ({ className = "" }) => {
   const [infoList, setInfoList] = useState([]);
 
   useEffect(() => {
-    fetch("/inori_session/assets/update.css")
+    fetch("/assets/update.css")
       .then((response) => response.text())
       .then((data) => {
         const infoArray = data
@@ -59,7 +59,7 @@ const Information = ({ className = "" }) => {
                     className={styles.infoSplitter}
                     loading="lazy"
                     alt=""
-                    src="/inori_session/vector-1.svg"
+                    src="/vector-1.svg"
                     style={{ marginTop: "calc(var(--scaler) * 1rem)" }}
                   />
                 </motion.div>

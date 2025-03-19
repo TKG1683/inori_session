@@ -15,3 +15,20 @@
   left: 0;
   z-index: 0;
 }
+
+.specialDescription
+{
+  width: 94%;
+  height: auto;
+  left: 2%;
+  text-align: left;
+  z-index: 1;
+  position: relative;
+  color: #1A1A6D;
+  top: 2rem;
+  background-color: #FFF5B7;
+  border-radius: 10px;
+  font-family: var(--font_jp);
+  font-size: calc(var(--scaler) * 4rem);
+  margin-top: calc(var(--scaler) *description 1rem);
+}

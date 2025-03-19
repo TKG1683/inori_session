@@ -34,7 +34,7 @@ const Root = () => {
         >
           {/* アイコンのアニメーション */}
           <motion.img
-            src={"/inori_session/logo512.png"}
+            src={"/logo512.png"}
             alt="Icon"
             initial={{ y: "-100%", opacity: 1 }}
             animate={{

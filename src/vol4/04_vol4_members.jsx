@@ -12,20 +12,10 @@ import { ins } from "framer-motion/client";
 const Members = ({ className = "" }) => {
   const members = [
     {
-      name: "TKG",
-      part: "Drums",
-      favoriteSongs: "旅の途中、三月と群青、Well Wishing Word",
-      comment: "まさかのドラムワンマン運転！がんばります…！",
-      image: "./images/member_icon/tkg-icon.jpg",
-      X:"https://x.com/azucat1683",
-      instagram:"https://www.instagram.com/tkg1683/",
-      youtube:"https://www.youtube.com/@tekejinn",
-    },
-    {
       name: "Gensan",
       part: "Bass, Guitar",
       favoriteSongs: "REAL-EYES、約束のアステリズム、brave climber",
-      comment: "いのりの涙を受け止めるために、全力で演奏します。",
+      comment: "また開催できて嬉しい！頑張ります！",
       image: "./images/member_icon/gensan-icon.jpg",
       X:"https://x.com/bassbro1130",
       instagram:"",
@@ -34,12 +24,52 @@ const Members = ({ className = "" }) => {
     {
       name: "親フラ",
       part: "Guitar",
-      favoriteSongs: "クリスタライズ、Kitty Cat Adventure",
-      comment: "速弾きします。",
+      favoriteSongs: "クリスタライズ、パレオトピア、identity",
+      comment: "できる限り音数詰めて速く弾きます",
       image: "./images/member_icon/ParentFlash-icon.jpg",
       X:"https://x.com/ParentFlash",
       instagram:"",
       youtube:"",
+    },
+    {
+      name: "さかじょー",
+      part: "Guitar",
+      favoriteSongs: "三月と群青、クータスタ、スクラップアート",
+      comment: "やったるぞい‼️",
+      image: "./images/member_icon/sakajo-icon.jpg",
+      X:"https://x.com/sgkshasaikodaze",
+      instagram:"",
+      youtube:"https://www.youtube.com/@sakajomusic",
+    },
+    {
+      name: "森山",
+      part: "Guitar",
+      favoriteSongs: "Shoo-Bee-Doo-Wap-Wap!、フラーグム、Well wishing word",
+      comment: "いのりさん曲難しいです。頑張ります。",
+      image: "./images/member_icon/moriyama-icon.jpg",
+      X:"https://x.com/xmakisex",
+      instagram:"",
+      youtube:"",
+    },
+    {
+      name: "村田",
+      part: "Bass, Guitar",
+      favoriteSongs: "ココロソマリ、Milky Star",
+      comment: "顔で弾きます！",
+      image: "./images/member_icon/murata-icon.jpg",
+      X:"https://x.com/Kuruma_yaee",
+      instagram:"",
+      youtube:"",
+    },
+    {
+      name: "TKG",
+      part: "Drums",
+      favoriteSongs: "旅の途中、三月と群青、Well Wishing Word",
+      comment: "まさかのドラムワンマン運転！がんばります…！🫠",
+      image: "./images/member_icon/tkg-icon.jpg",
+      X:"https://x.com/azucat1683",
+      instagram:"",
+      youtube:"https://www.youtube.com/@tekejinn",
     },
   ];
 
@@ -48,17 +78,17 @@ const Members = ({ className = "" }) => {
       <div className={styles.snsIcons}>
         {member.X !== "" && (
           <a href={member.X} target="_blank" rel="noopener noreferrer" className={styles.forX}>
-            <img src="/inori_session/images/icon-x.png" alt="" className={styles.snsIcon} />
+            <img src="/images/icon-x.png" alt="" className={styles.snsIcon} />
           </a>
         )}
         {member.instagram !== "" && (
           <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-            <img src="/inori_session/images/icon-ig.png" alt="" className={styles.snsIcon} />
+            <img src="/images/icon-ig.png" alt="" className={styles.snsIcon} />
           </a>
         )}
         {member.youtube !== "" && (
           <a href={member.youtube} target="_blank" rel="noopener noreferrer">
-            <img src="/inori_session/images/icon-yt.png" alt="" className={styles.snsIcon} />
+            <img src="/images/icon-yt.png" alt="" className={styles.snsIcon} />
           </a>
         )}
       </div>
