@@ -6,6 +6,7 @@ const youtube_archives = [
   { title: "【第一回】水瀬いのり セッション会@秋葉音楽館【2023/2/18】" , url :"https://www.youtube.com/embed/bZ9m6My9opE"},
   { title: "【第二回】水瀬いのり セッション会@秋葉音楽館【2023/10/29】" , url :"https://www.youtube.com/embed/zdgN6rsMQ7M"},
   { title: "【第三回】水瀬いのり セッション会@スタジオノア学芸大店【2024/5/5】" , url :"https://www.youtube.com/embed/dwq2sD70Cfc"}
+  { title: "【水瀬いのりセッション会】スタジオでミニセッション会 vol.1" , url :"https://youtu.be/xziJynI6FZM"}
 ]
 
 const youtube_band_covers = [
