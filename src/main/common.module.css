@@ -9,10 +9,9 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-sm) var(--padding-8xs) var(--padding-8xs)
-    var(--padding-7xs);
+  padding: 14px 5px 5px 6px;
   box-sizing: border-box;
-  gap: var(--gap-14xl);
+  gap: 33px;
   font-family: var(--font-inter);
   box-shadow: 0 0 20px rgba(255, 238, 222, 0.762);
 }

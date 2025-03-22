@@ -24,6 +24,7 @@
   width: 100%;
   height: auto;
   display: flex;
+  top: 10%;
   flex-wrap: wrap; /* 必要に応じて折り返し */
   gap: calc(var(--scaler) * 5px); /* 動画間の空白を設定 */
   z-index: 1;

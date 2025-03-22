@@ -23,7 +23,7 @@ const Precautions = ({ className = "" }) => {
               本イベントは非営利で行います。観客の方の参加費は会場費に充てられます。
             </li>
             <li className={styles.precautionsListItem}>
-              本イベントはJASRACの楽曲演奏許諾を取って開催します。許諾番号：xxxxxxxxxxxxxxxxxxxx
+              本イベントはJASRACの楽曲演奏許諾を取って開催します。許諾番号は取得次第このページに掲載します。
             </li>
             <li className={styles.precautionsListItem}>
               会場に関する問い合わせはセッション会の
