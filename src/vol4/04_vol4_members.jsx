@@ -65,7 +65,7 @@ const Members = ({ className = "" }) => {
       name: "村田",
       part: "Bass, Guitar",
       favoriteSongs: "ココロソマリ、glow、Milky Star",
-      comment: "",
+      comment: "坊主頭の村田です。皆さんと楽しみたいと思います。よろしくお願いします！",
       image: "./images/member_icon/murata-icon.jpg",
       X:"https://x.com/Kuruma_yaee",
       instagram:"",
