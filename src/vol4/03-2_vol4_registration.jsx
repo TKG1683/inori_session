@@ -14,7 +14,7 @@ const Registration = ({ className = "" }) => {
     <div className={[styles.registrationContaier, className].join(" ")}>
       <div className={styles.registrationMain}>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyKtmDt_z5hN7jEvqFxAyNYiKGbTHDSbDCb5C8Z79xGFwFAQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={styles.rect}>
-          参加登録はこちら！
+          観覧参加登録はこちら！
         </a>
       </div>
     </div>
