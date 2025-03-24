@@ -55,8 +55,8 @@ const EventInfo = ({ className = "" }) => {
           <h3 className={styles.textAboutTitle}>What is this event?</h3>
           <div className={styles.textAboutDesctiption}>
           水瀬いのりさんの楽曲オンリーでお届けする、ファンによるセッションライブイベントです！🍀<br/>
-          合わせ練習ほぼ無しのセッション形式で、一発勝負のライブ演奏を披露！🎸⚡<br/><br/>
-          🔥 演奏参加者は<a className={styles.link} onClick={() => scrollToSection("members")}>members</a>をチェック！ 今回も猛者たちが集結！😎<br/><br/>
+          合わせ練習ほぼ無しのセッション形式で、一発勝負のライブ演奏を披露します！🎸⚡<br/><br/>
+          🔥 演奏参加者は<a className={styles.link} onClick={() => scrollToSection("members")}>members</a>をチェック😎<br/><br/>
           🎫 観客として参加したい方は<a href="https://docs.google.com/forms/d/e/1FAIpQLSeyKtmDt_z5hN7jEvqFxAyNYiKGbTHDSbDCb5C8Z79xGFwFAQ/viewform?usp=header" className={styles.link}>観客参加登録</a>からご登録ください！<br/>
           </div>
         </div>
