@@ -37,13 +37,14 @@
   background-color: rgba(254, 240, 239, 1);
   max-width: 100%;
   z-index: 1;
-  font-size: calc(var(--scaler) * 3rem);
+  font-size: 3rem;
 }
 @media (max-width: 768px)
 {
   .rect
   {
     width: 100%;
+    font-size: 2rem;
   }
 }
 

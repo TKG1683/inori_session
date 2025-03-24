@@ -142,15 +142,67 @@
     letter-spacing: 0.1em;
 }
 
-.venueInfo {
+.aboutInfo {
     height: auto;
-    width: auto;
+    width: calc(var(--scaler) * 1000px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(var(--scaler) * 1000px);
     position: relative;
     margin-top: 20px;
     z-index: 4;
     font-family: var(--font_jp);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     color: var(--text-light-blue);
+}
+@media (max-width: 768px)
+{
+  .aboutInfo
+  {
+    width: 100%;
+  }
+}
+
+.textAboutTitle
+{
+    font-size: calc(var(--scaler) * 2.5rem);
+    top: 3rem;
+    left: 2rem;
+    position: relative;
+    color: #F0A500;
+}
+
+.textAboutDesctiption
+{
+    font-size: calc(var(--scaler) * 1.5rem);
+    position: relative;
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    margin-top: 3.5rem;
+    font-family: var(--font_jp);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.venueInfo {
+    height: auto;
+    width: calc(var(--scaler) * 1000px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(var(--scaler) * 1000px);
+    position: relative;
+    margin-top: 20px;
+    z-index: 4;
+    font-family: var(--font_jp);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    color: var(--text-light-blue);
+}
+@media (max-width: 768px)
+{
+  .venueInfo
+  {
+    width: 100%;
+  }
 }
 
 .rect
@@ -172,6 +224,7 @@
     top: 3rem;
     left: 2rem;
     position: relative;
+    color: #F0A500;
 }
 
 .textVenueDesctiption
@@ -181,7 +234,7 @@
     text-align: center;
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .redPinIcon
@@ -194,6 +247,13 @@
     left: 20px;
     object-fit: cover;
     z-index: 2;
+}
+
+.link
+{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 iframe

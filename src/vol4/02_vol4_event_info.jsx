@@ -3,13 +3,20 @@ import styles from "./02_vol4_event_info.module.css";
 
 const eventDetails = {
   date: "2025. 8. 10 Sat.",
-  openTime: "Open / 16:30",
-  startTime: "Start / 17:00",
+  openTime: "Open / 16:00",
+  startTime: "Start / 16:30",
   ticketPrice: "￥2,000",
   venue: <a href="https://www.studionoah.jp/gakudai/1bst/" className={styles.link}>スタジオノア 学芸大店 B1スタジオ</a>,
 };
 
 const EventInfo = ({ className = "" }) => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
   return (
     <section className={[styles.eventInfoContainer, className].join(" ")}>
       <div className={styles.eventMainInfo}>
@@ -42,6 +49,23 @@ const EventInfo = ({ className = "" }) => {
             </p>
           </div>
         </div>
+      </div>
+      <div className={styles.aboutInfo}>
+        <div className={styles.rect}>
+          <h3 className={styles.textAboutTitle}>What is this event?</h3>
+          <div className={styles.textAboutDesctiption}>
+          水瀬いのりさんの楽曲オンリーでお届けする、ファンによるセッションライブイベントです！🍀<br/>
+          合わせ練習ほぼ無しのセッション形式で、一発勝負のライブ演奏を披露！🎸⚡<br/><br/>
+          🔥 演奏参加者は<a className={styles.link} onClick={() => scrollToSection("members")}>members</a>をチェック！ 今回も猛者たちが集結！😎<br/><br/>
+          🎫 観客として参加したい方は<a href="https://docs.google.com/forms/d/e/1FAIpQLSeyKtmDt_z5hN7jEvqFxAyNYiKGbTHDSbDCb5C8Z79xGFwFAQ/viewform?usp=header" className={styles.link}>観客参加登録</a>からご登録ください！<br/>
+          </div>
+        </div>
+        <img
+          className={styles.redPinIcon}
+          loading="lazy"
+          alt=""
+          src="./images/red-pin.png"
+        />
       </div>
       <div className={styles.venueInfo}>
         <div className={styles.rect}>
