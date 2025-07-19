@@ -9,6 +9,7 @@ const youtube_archives = [
   { title: "【水瀬いのりセッション会】スタジオでミニセッション会 vol.1" , url :"https://www.youtube.com/embed/xziJynI6FZM"},
 ]
 const youtube_band_covers = [
+  { title: "【水瀬いのりセッション会】星屑のコントレイル / 水瀬いのり Band Cover" , url :"https://www.youtube.com/embed/yLne3lqMLPY"},
   { title: "【水瀬いのりセッション会】三月と群青  / 水瀬いのり Band Cover" , url :"https://www.youtube.com/embed/05Fx4CtzOLc"},
   { title: "【水瀬いのりセッション会】約束のアステリズム / 水瀬いのり Band Cover" , url :"https://www.youtube.com/embed/FWNOrHGiMn0"},
   { title: "【水瀬いのりセッション会】アイマイモコ / 水瀬いのり Band Cover" , url :"https://www.youtube.com/embed/cIcLJYRlefk"},

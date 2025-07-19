@@ -19,7 +19,7 @@ const Precautions = ({ className = "" }) => {
               <h3 className={styles.precautionsHeading}>📌 イベントについて</h3>
               <li className={styles.precautionsListItem}>本イベントは有志による非公式イベントです。</li>
               <li className={styles.precautionsListItem}>本イベントは非営利で行います。観客の方の参加費は会場費に充てられます。</li>
-              <li className={styles.precautionsListItem}>本イベントはJASRACの楽曲演奏許諾を取って開催します。許諾番号は取得次第このページに掲載します。</li>
+              <li className={styles.precautionsListItem}>本イベントはJASRAC許諾番号は <u>第K9612791号</u> です。</li>
 
           <h3 className={styles.precautionsHeading}>📌 お問い合わせについて</h3>
           <li className={styles.precautionsListItem}>会場に関する問い合わせはセッション会の
@@ -27,7 +27,14 @@ const Precautions = ({ className = "" }) => {
           </li>
 
           <h3 className={styles.precautionsHeading}>📌 ご来場について</h3>
-          <li className={styles.precautionsListItem}>混雑を避けるため、開場時間に合わせてお越しいただき、会場付近での待機はお控えください。（会場は他の利用者もいる施設です。）</li>
+          <li className={styles.precautionsListItem}>混雑緩和のためと、待機場所（空調設備無し）が限られているため、開場時間に合わせてお越しいください。8月は高気温になる可能性が高く、空調設備の無い場所での長時間待機は危険です。</li>
+          <li className={styles.precautionsListItem}>会場内のスペースは限られています。大きな荷物は持ち込まないようお願いします。</li>
+
+          <h3 className={styles.precautionsHeading}>📌 免責事項</h3>
+          <li className={styles.precautionsListItem}>会場内外で発生した事故・怪我・体調不良等について、主催者は一切の責任を負いません。</li>
+          <li className={styles.precautionsListItem}>貴重品を含む持ち物の管理はご自身でお願いいたします。盗難・紛失・破損について、主催者は責任を負いかねます。</li>
+          <li className={styles.precautionsListItem}>天候や主催者の判断により、イベントの内容が予告なく変更・中止される場合があります。その際の交通費・宿泊費等の補償はできかねますので、あらかじめご了承ください。</li>
+          <li className={styles.precautionsListItem}>他の観客や演奏者の迷惑になる行為はお控えください。迷惑行為が確認された場合、主催者は退場をお願いすることがあります。また、その場合の返金は致しかねます。</li>
 
           {/* こっから元はアニメーションだったやつ*/}
           <h3 className={styles.precautionsHeading}>📌 撮影・録画について</h3>
@@ -38,14 +45,6 @@ const Precautions = ({ className = "" }) => {
               <h3 className={styles.precautionsHeading}>📌 演奏内容について</h3>
               <li className={styles.precautionsListItem}>
                 演奏曲は事前にセットリストを組んでおります。リクエストにはお応えできません。演奏メンバーの募集は終了しておりますので、ご了承ください。
-              </li>
-
-              <h3 className={styles.precautionsHeading}>📌 観客マナーについて</h3>
-              <li className={styles.precautionsListItem}>
-                他の観客や演奏者の迷惑になる行為はお控えください。迷惑行為が確認された場合、主催者は退場をお願いすることがあります。また、その場合の返金は致しかねます。
-              </li>
-              <li className={styles.precautionsListItem}>
-                開場内のスペースは限られています。大きな荷物は持ち込まないようお願いします。
               </li>
 
               <h3 className={styles.precautionsHeading}>📌 飲食・喫煙について</h3>
