@@ -19,7 +19,7 @@ const Precautions = ({ className = "" }) => {
               <h3 className={styles.precautionsHeading}>📌 イベントについて</h3>
               <li className={styles.precautionsListItem}>本イベントは有志による非公式イベントです。</li>
               <li className={styles.precautionsListItem}>本イベントは非営利で行います。観客の方の参加費は会場費に充てられます。</li>
-              <li className={styles.precautionsListItem}>本イベントはJASRAC許諾番号は <u>第K9612791号</u> です。</li>
+              <li className={styles.precautionsListItem}>本イベントのJASRAC許諾番号は <u>第K9612791号</u> です。</li>
 
           <h3 className={styles.precautionsHeading}>📌 お問い合わせについて</h3>
           <li className={styles.precautionsListItem}>会場に関する問い合わせはセッション会の
